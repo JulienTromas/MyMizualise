@@ -23,30 +23,31 @@ function App() {
   }  
 
   return (
+    <>
     <div className="App">
+    <BrowserRouter>
       <div className="header" style={{ backgroundImage: `url(${Background})`}}>
-        <h1 className="headerText">mymisualize</h1>
+        <h1 className="headerText">mymizualize</h1>
         <p className="headerNote">A guide to visualizing mymizu's impact on the environment</p>
       </div>
       <button onClick={getData}>Show me the Money</button>
         <div>
           <h1>{data.refill_amount}</h1>
         </div>
-        <>
-      <BrowserRouter>
+
         <div>
         <Navbar />
             <Switch>
-              <Route path="/Bottles" render={() => <Bottles scroll={scroll} setScroll={setScroll}/>} />
+              <Route path="/Bottles" render={() => <Bottles data={data} scroll={scroll} setScroll={setScroll}/>} />
               
             </Switch>
           </div> 
+          </BrowserRouter>
           <div>
             {/* Insert login area */}
           </div>
-      </BrowserRouter>
+          </div>
     </>
-    </div>
   );
 }
 

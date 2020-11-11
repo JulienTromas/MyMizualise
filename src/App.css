@@ -2,21 +2,80 @@
 Have margin around the logo which is equivalent to 30% of the logo's height.
 
 PRIMARY COLORS:
-General font color => #
-Emphasis font color => 
-Main background color => 
+General font color => #2D383F
+Emphasis font color => #2E98D1
+Main background color => #DFEEF5
 
 ACCENT COLORS:
-General font color => 
-General font color => 
-General font color => 
+<<<<<<< HEAD
+General font color => #3F6A88
+General font color => #7BA4B8
+General font color => #E5E5E7
+
+Use beautiful nature photography with bold text
+
+User buttons with straight corners
+
 */
+
+.scrollTracker {
+  position: fixed;
+}
+
+#months{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  margin-top:155px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bottleMonth{
+  height:160px;
+}
+
+#header{
+  position:fixed;
+  top:0px;
+  height:125px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.808);
+}
+
+#topBanner{
+  position:fixed;
+  top: 125px;
+  height:400px;
+  width: 100%;
+  background-color: rgb(0, 0, 255);
+}
+
+#textChanger{
+  position:fixed;
+  bottom:0px;
+  height:275px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+#November {
+  margin-bottom: 235px;
+}
+
+#greenTopBanner{
+  position:fixed;
+  top: 125px;
+  height:400px;
+  width: 100%;
+  background-color: green;
+}
 
 .header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     padding: 60px;
+    height: 200px;
     opacity: 0.8;
 }
 

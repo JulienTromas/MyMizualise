@@ -16,7 +16,7 @@ function App() {
       console.log(data.refill_amount)
     });
   }  
-  
+
   return (
     <div className="App">
       <button onClick={getData}>Show me the Money</button>

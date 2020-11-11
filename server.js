@@ -1,25 +1,14 @@
 const express = require("express")
-const fetch = require("node-fetch");
 const axios = require("axios");
-const { response } = require("express");
 require('dotenv').config()
 
 //server initialization
 const app = express()
-const PORT = process.env_PORT || 3000
+const PORT = process.env_PORT || 8080
 
 
 //middleware
 app.use(express.static("./"))
-
-// axios({
-//     method: "GET",
-//     url:
-//       "https://my-mizu-dev2-gen8n.ondigitalocean.app/dev-api/community",
-//     headers: {
-//       Authorization: `Bearer ${process.env.DEV_KEY}`,
-//     },
-//   }).then((res) => console.log(res.data));
 
 app.get('/api/hello', (req, res)=> {
   res.send("jay")

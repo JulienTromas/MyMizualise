@@ -7,6 +7,7 @@ Emphasis font color => #2E98D1
 Main background color => #DFEEF5
 
 ACCENT COLORS:
+<<<<<<< HEAD
 General font color => #3F6A88
 General font color => #7BA4B8
 General font color => #E5E5E7
@@ -22,7 +23,9 @@ User buttons with straight corners
 }
 
 #months{
-  margin-top:480px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  margin-top:155px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -65,4 +68,28 @@ User buttons with straight corners
   height:400px;
   width: 100%;
   background-color: green;
+}
+
+.header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 60px;
+    height: 200px;
+    opacity: 0.8;
+}
+
+.headerText {
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    font-size: 80px;
+    opacity: 1;
+}
+
+.headerNote {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    font-size: 30px;
+    opacity: 1;
 }

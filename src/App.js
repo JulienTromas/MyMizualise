@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Bottles from './components/Bottles'
 import './App.css';
 import axios from 'axios';
-
+import Background from './img/pexels-daria-shevtsova-1680140.jpg';
 
 function App() {
 
@@ -23,13 +23,18 @@ function App() {
   }  
 
   return (
+    <>
     <div className="App">
+    <BrowserRouter>
+      <div className="header" style={{ backgroundImage: `url(${Background})`}}>
+        <h1 className="headerText">mymizualize</h1>
+        <p className="headerNote">A guide to visualizing mymizu's impact on the environment</p>
+      </div>
       <button onClick={getData}>Show me the Money</button>
         <div>
           <h1>{data.refill_amount}</h1>
         </div>
-        <>
-      <BrowserRouter>
+
         <div>
         <Navbar />
             <Switch>
@@ -37,12 +42,12 @@ function App() {
               
             </Switch>
           </div> 
+          </BrowserRouter>
           <div>
             {/* Insert login area */}
           </div>
-      </BrowserRouter>
+          </div>
     </>
-    </div>
   );
 }
 

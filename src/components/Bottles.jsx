@@ -13,15 +13,15 @@ export default function Bottles({scroll, setScroll, data}) {
   return (
     <>
     <div id="header"></div>
-    {yPosition >= 76 && yPosition <= 250 ? (<div id="greenTopBanner" style={{backgroundColor:'green'}}>February</div>) :
-    yPosition >= 250 && yPosition <= 427 ? (<div id="greenTopBanner" style={{backgroundColor:'red'}}>March</div>) :
-    yPosition >= 427 && yPosition <= 603 ? (<div id="greenTopBanner" style={{backgroundColor:'orange'}}>April</div>) : 
-    yPosition >= 603 && yPosition <= 778 ? (<div id="greenTopBanner" style={{backgroundColor:'yellow'}}>May</div>) :
-    yPosition >= 778 && yPosition <= 954 ? (<div id="greenTopBanner" style={{backgroundColor:'orange'}}>June</div>) :
-    yPosition >= 954 && yPosition <= 1131 ? (<div id="greenTopBanner" style={{backgroundColor:'purple'}}>July</div>) :
-    yPosition >= 1131 && yPosition <= 1306 ? (<div id="greenTopBanner" style={{backgroundColor:'brown'}}>August</div>) :
-    yPosition >= 1306 && yPosition <= 1482 ? (<div id="greenTopBanner" style={{backgroundColor:'aqua'}}>September</div>) :
-    yPosition >= 1482 && yPosition <= 1658 ? (<div id="greenTopBanner" style={{backgroundColor:'chartreuse'}}>October</div>) :
+    {yPosition >= 76 && yPosition < 250 ? (<div id="greenTopBanner" style={{backgroundColor:'green'}}>February</div>) :
+    yPosition >= 250 && yPosition < 427 ? (<div id="greenTopBanner" style={{backgroundColor:'red'}}>March</div>) :
+    yPosition >= 427 && yPosition < 600 ? (<div id="greenTopBanner" style={{backgroundColor:'orange'}}>April</div>) : 
+    yPosition >= 600 && yPosition < 778 ? (<div id="greenTopBanner" style={{backgroundColor:'yellow'}}>May</div>) :
+    yPosition >= 778 && yPosition < 954 ? (<div id="greenTopBanner" style={{backgroundColor:'orange'}}>June</div>) :
+    yPosition >= 954 && yPosition < 1131 ? (<div id="greenTopBanner" style={{backgroundColor:'purple'}}>July</div>) :
+    yPosition >= 1131 && yPosition < 1306 ? (<div id="greenTopBanner" style={{backgroundColor:'brown'}}>August</div>) :
+    yPosition >= 1306 && yPosition < 1482 ? (<div id="greenTopBanner" style={{backgroundColor:'aqua'}}>September</div>) :
+    yPosition >= 1482 && yPosition < 1658 ? (<div id="greenTopBanner" style={{backgroundColor:'chartreuse'}}>October</div>) :
     yPosition >= 1658 ? (<div id="greenTopBanner" style={{backgroundColor:'yellow'}}>November</div>) :
     (<div id="topBanner">January</div>)}
     

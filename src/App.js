@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
+import { getData } from "./utils/";
 import "./App.css";
-const axios = require("axios");
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios({
-      method: "GET",
-      url:
-        "https://cors-anywhere.herokuapp.com/https://my-mizu-dev2-gen8n.ondigitalocean.app/dev-api/community",
-      headers: {
-        Authorization: `Bearer 11|lNYfuYmccaqcTsup2VZhgHavQ85FAX8OofXKah4u`,
-      },
-    }).then((res) => {
-      setUsers(res.data);
-      console.log(users);
-    });
-  }, [users]);
+    if (data.length === 0)
+      getData().then((data) => {
+        setData(data);
+        console.log(data);
+      });
+  });
 
   return (
     <div className="App">

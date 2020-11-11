@@ -6,6 +6,7 @@ import Bottles from './components/Bottles'
 import './App.css';
 import axios from 'axios';
 
+
 function App() {
 
   const [data, setData] = useState([]);
@@ -32,7 +33,7 @@ function App() {
         <div>
         <Navbar />
             <Switch>
-              <Route path="/Bottles" render={() => <Bottles scroll={scroll} setScroll={setScroll}/>} />
+              <Route path="/Bottles" render={() => <Bottles data={data} scroll={scroll} setScroll={setScroll}/>} />
               
             </Switch>
           </div> 

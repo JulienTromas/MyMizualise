@@ -1,32 +1,45 @@
-const express = require("express");
-const app = express();
+const express = require("express")
+const fetch = require("node-fetch");
 const axios = require("axios");
-const csv = require("csv-parser");
-const fs = require("fs");
-app.use(express.static("./"));
-require("dotenv").config();
+const { response } = require("express");
+require('dotenv').config()
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  next();
-});
+//server initialization
+const app = express()
+const PORT = process.env_PORT || 3000
 
-let data;
-let litters = 0;
 
-axios({
-  method: "GET",
-  url: "https://my-mizu-dev2-gen8n.ondigitalocean.app/dev-api/community",
-  headers: {
-    Authorization: `Bearer ${process.env.DEV_KEY}`,
-  },
-}).then((res) => {
-  data = res.data;
-  console.log(data);
-});
+//middleware
+app.use(express.static("./"))
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("listening at port 5000");
-});
+// axios({
+//     method: "GET",
+//     url:
+//       "https://my-mizu-dev2-gen8n.ondigitalocean.app/dev-api/community",
+//     headers: {
+//       Authorization: `Bearer ${process.env.DEV_KEY}`,
+//     },
+//   }).then((res) => console.log(res.data));
 
-module.exports = { data };
+app.get('/api/hello', (req, res)=> {
+  res.send("jay")
+})
+
+app.get('/api/refills', (req, res) => {
+  axios({
+    method: "GET",
+    url:
+      "https://my-mizu-dev2-gen8n.ondigitalocean.app/dev-api/community",
+    headers: {
+      Authorization: `Bearer ${process.env.DEV_KEY}`,
+    },
+  })
+  .then((response) => {
+    console.log(response.data); 
+    res.json(response.data)
+  })
+})
+
+app.listen(PORT,() => {
+    console.log(`listening at http://localhost:${PORT}`)
+})

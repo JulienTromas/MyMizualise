@@ -1,0 +1,149 @@
+import React, { useEffect, useState } from "react";
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+
+export default function Bottles({scroll, setScroll}) {
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    console.log(currPos.x)
+    console.log(currPos.y)
+  })
+
+
+  return (
+    <>
+        <div>
+        Number of plastic bottles saved by MyMizu users
+        </div>
+  <h2 className="scrollTracker" onClick={() => setScroll(window.pageYOffset)}>{scroll} meters</h2>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+  <div>bottle</div>
+    </>
+  );
+}
+
+
+

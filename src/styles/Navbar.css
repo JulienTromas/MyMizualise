@@ -1,0 +1,28 @@
+/*
+Have margin around the logo which is equivalent to 30% of the logo's height.
+
+PRIMARY COLORS:
+General font color => #2D383F
+Emphasis font color => #2E98D1
+Main background color => #DFEEF5
+
+ACCENT COLORS:
+<<<<<<< HEAD
+General font color => #3F6A88
+General font color => #7BA4B8
+General font color => #E5E5E7
+
+Use beautiful nature photography with bold text
+
+User buttons with straight corners
+
+*/
+ 
+  #header_navbar {
+    position: fixed;
+    top: 0px;
+    height: 125px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.808);
+  }
+  

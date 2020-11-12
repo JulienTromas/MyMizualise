@@ -7,7 +7,6 @@ Emphasis font color => #2E98D1
 Main background color => #DFEEF5
 
 ACCENT COLORS:
-<<<<<<< HEAD
 General font color => #3F6A88
 General font color => #7BA4B8
 General font color => #E5E5E7
@@ -22,6 +21,9 @@ User buttons with straight corners
   position: fixed;
 }
 
+/* #wrapper{
+  background-image: linear-gradient(transparent 0%, #050505 30%, black 70%, transparent 90%);
+  -webkit-background-clip:text;
 #wrapper {
   background-image: linear-gradient(
     transparent 10%,
@@ -34,7 +36,7 @@ User buttons with straight corners
 
 #wrapper > * {
   color: transparent;
-}
+} */
 
 #months {
   font-family: "Nunito Sans", sans-serif;
@@ -56,12 +58,15 @@ User buttons with straight corners
   background-color: rgba(255, 0, 0, 0.808);
 }
 
+
 #topBanner {
   position: fixed;
   top: 125px;
   height: 400px;
   width: 100%;
-  background-color: rgb(0, 0, 255);
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
 #whiteTransparentBlock {
@@ -81,7 +86,10 @@ User buttons with straight corners
   top: 125px;
   height: 400px;
   width: 100%;
-  background-color: green;
+  background-color: white;
+  overflow: "hidden";
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -100,6 +108,7 @@ User buttons with straight corners
   font-size: 100px;
   opacity: 1;
   margin-bottom: 0px;
+  /* text-shadow: 3px 3px #000000; */
 }
 
 .headerNote {
@@ -108,6 +117,26 @@ User buttons with straight corners
   font-size: 36px;
   opacity: 1;
 }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 2s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(100deg);
+  }
+} */
 
 .routingDiv {
   display: flex;
@@ -145,6 +174,12 @@ h2 {
   font-size: 20px;
 }
 
+p {
+  font-weight: bold;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .buttonBox {
   text-align: center;
 }
@@ -179,4 +214,5 @@ h2 {
   height: auto;
   max-width: 100px;
   vertical-align: -36px;
+}
 }

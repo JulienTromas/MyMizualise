@@ -24,6 +24,10 @@ function App() {
     });
   }
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <BrowserRouter>
       {currentView === "Homepage" ? (
@@ -87,7 +91,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <Navbar currentView={currentView} setCurrentView={setCurrentView} />
+          <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}
       <div>

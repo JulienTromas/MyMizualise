@@ -88,39 +88,49 @@ User buttons with straight corners
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
   background-color: white;
-  padding: 60px;
+  padding: 24px;
   opacity: 0.8;
+  margin-top: -40px;
 }
 
 .headerText {
   font-weight: bold;
   font-family: "Nunito Sans", sans-serif;
   color: white;
-  font-size: 80px;
+  font-size: 100px;
   opacity: 1;
+  margin-bottom: 0px;
 }
 
 .headerNote {
   font-family: "Nunito Sans", sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 36px;
   opacity: 1;
 }
 
 .routingDiv {
   display: flex;
-  margin-bottom: 250px;
+  margin-bottom: 140px;
+  margin-left: 150px;
+  margin-right: 150px;;
 }
 
 .bottlesBox {
   flex: 1;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   max-width: 400px;
 }
 
 .co2Box {
   flex: 1;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   max-width: 400px;
 }
 
@@ -128,6 +138,11 @@ h2 {
   text-align: center;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
+  font-size: 30px;
+}
+
+.textDescription {
+  font-size: 20px;
 }
 
 .buttonBox {
@@ -137,14 +152,31 @@ h2 {
 .routingButtons {
   background-color: #dfeef5;
   text-align: center;
+  /* font-weight: bold; */
   border: none;
   padding: 18px 32px;
   text-align: center;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.teamDiv {
-  padding: 60px;
+.footerDiv {
+  padding-bottom: 10px;
+  padding-top: 3px;
   background-color: #dfeef5;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.footerText {
+  margin-top: 10px;
+}
+
+.mymizuLogo {
+  cursor: pointer;
+  height: auto;
+  max-width: 100px;
+  vertical-align: -36px;
 }

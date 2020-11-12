@@ -29,6 +29,7 @@ function App() {
   // }, []);
 
   return (
+
     <BrowserRouter>
       {currentView === "Homepage" ? (
         <div className="App">
@@ -91,6 +92,7 @@ function App() {
         </div>
       ) : (
         <div>
+
           <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}
@@ -116,6 +118,7 @@ function App() {
         </Switch>
       </div>
     </BrowserRouter>
+
   );
 }
 

@@ -28,13 +28,9 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-<<<<<<< HEAD
     "start": "^5.1.0",
     "use-places-autocomplete": "^1.6.0",
     "yarn": "^1.22.10"
-=======
-    "styled-components": "^5.2.1"
->>>>>>> e7de54c8272584097d128f518d47c8bc87ff1fd0
   },
   "scripts": {
     "server": "node server.js",

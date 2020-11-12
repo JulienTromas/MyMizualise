@@ -10,7 +10,7 @@ export default function Navbar(props) {
         <NavLink to="/Bottles">
           <button>My bottles</button>
         </NavLink>
-        <NavLink to="/Co2">
+        <NavLink to="/CarbonDioxyde">
           <button>My CO2</button>
         </NavLink>
 

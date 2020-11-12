@@ -11,7 +11,6 @@ import "./App.css";
 import axios from "axios";
 import MymizuLogo from "./img/mymizu-logo-1.svg";
 
-
 function App() {
   const [data, setData] = useState([]);
   const [currentView, setCurrentView] = useState("Homepage");
@@ -32,15 +31,11 @@ function App() {
   // }, []);
 
   return (
-
     <BrowserRouter>
       {currentView === "Homepage" ? (
-
         <Home currentView={currentView} setCurrentView={setCurrentView} />
       ) : (
-
         <div className="navbarDiv">
-
           <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}

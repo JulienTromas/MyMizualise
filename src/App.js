@@ -30,6 +30,10 @@ function App() {
   // }, []);
 
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8189fd1ea2b60e010ec6964c1fab93e10c13a123
     <BrowserRouter>
       {currentView === "Homepage" ? (
         <div className="App">

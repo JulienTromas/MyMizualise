@@ -23,6 +23,10 @@ function App() {
     });
   }
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <BrowserRouter>
       {currentView === "Homepage" ? (
@@ -32,8 +36,8 @@ function App() {
             <p className="headerNote">
               A guide to visualizing mymizu's impact on the environment
             </p>
-            <button onClick={getData}>Show me the Money</button>
-            <h1>{data.refill_amount}</h1>
+            {/* <button onClick={getData}>Show me the Money</button>
+            <h1>{data.refill_amount}</h1> */}
           </div>
           <div className="routingDiv">
             <div className="bottlesBox">
@@ -78,7 +82,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <Navbar currentView={currentView} setCurrentView={setCurrentView} />
+          <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}
       <div>

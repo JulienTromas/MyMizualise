@@ -13,6 +13,8 @@ export default function Navbar(props) {
         <NavLink to="/Co2">
           <button>My CO2</button>
         </NavLink>
+
+        {/* <p>{props.data.refill_amount}</p> */}
         {/* {props.currentView === "Bottles" ? (
           <div>
             <Bottles />

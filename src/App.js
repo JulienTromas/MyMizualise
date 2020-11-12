@@ -6,6 +6,7 @@ import Bottles from './components/Bottles'
 import './App.css';
 import axios from 'axios';
 import Background from './img/pexels-daria-shevtsova-1680140.jpg';
+import LocationInput from './components/LocationInput';
 
 function App() {
 
@@ -43,6 +44,9 @@ function App() {
           </div> 
           <div>
             {/* Insert login area */}
+          </div>
+          <div>
+            <LocationInput/>
           </div>
       </BrowserRouter>
     </>

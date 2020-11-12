@@ -17,12 +17,11 @@ Use beautiful nature photography with bold text
 User buttons with straight corners
 
 */
- 
-  #header_navbar {
-    position: fixed;
-    top: 0px;
-    height: 125px;
-    width: 100%;
-    background-color: rgba(255, 0, 0, 0.808);
-  }
-  
+
+#header_navbar {
+  position: fixed;
+  top: 0px;
+  height: 125px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.808);
+}

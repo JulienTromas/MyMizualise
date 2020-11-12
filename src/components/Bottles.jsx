@@ -12,6 +12,7 @@ import gundam from "../img/gundam.svg";
 import pyramid from "../img/pyramids.svg";
 import liberty from "../img/statue-of-liberty.svg";
 import space from "../img/space-station.svg";
+import everest from "../img/mission.svg";
 // import styled, {keyframes} from "styled-components";
 // import {bounce} from "react-animations";
 
@@ -68,7 +69,7 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
         </div>
       ) : yPosition >= 1658 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
-          November
+          <img src={everest} className="App-logo" alt="logo" />
         </div>
       ) : (
         <div id="topBanner">
@@ -144,13 +145,14 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In October of 2020, we prevented <em>38238 plastic bottles</em> from being
               used, thanks to a partnership with Lixit
             </p>
-            <p>The bottles are taller than 137 International Space Stations!</p>
+            <p>Now the bottles are taller than 137 International Space Stations!</p>
           </div>
           <div id="November" className="bottleMonth">
             <p>
               In November of 2020, we prevented <em>4120 plastic bottles</em> from being
               used so far
             </p>
+            <p>Bottle mountain is as tall as 2 Mount Everests!</p>
           </div>
         </div>
       </div>

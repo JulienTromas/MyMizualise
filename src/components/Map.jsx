@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {GoogleMap, useLoadScript, Marker, DistanceMatrixService} from '@react-google-maps/api';
 import usePlacesAutocomplete, {getGeocode, getLatLng} from "use-places-autocomplete";
 import {Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption} from "@reach/combobox";
@@ -14,7 +14,7 @@ const libraries = ["places"]
 //We pass this to google maps so it knows how much to render the map by.
 const mapContainerStyle = {
   width: '100vw',
-  height: '100vh'
+  height: '500px'
 };
 //this is given to google maps so that it knows where to show on render
 const center = {
@@ -22,18 +22,6 @@ const center = {
   lng: 139.7276486
 }
 
-//-------------------------------------------
-async function handleGetLatLng(address){
-  try{
-    const results2 = await getGeocode({ address });
-    const {lat, lng } = await getLatLng(results2[0])
-    console.log(lat,lng) //CHANGE THIS TO POINT TO DISTANCE MATRIX
-  } catch (error){
-    console.log("error!")
-  }
-}
-
-//-------------------------------------------
 
 
 //MAIN FUNCTION 
@@ -59,6 +47,7 @@ export default function Map() {
         center={center}
       >
       </GoogleMap>
+      <div>{origin}</div>
     </div>
   )
 }
@@ -74,6 +63,16 @@ function Search() {
     clearSuggestions
   } = usePlacesAutocomplete();
 
+  const [origin, setOrigin] = useState([])
+  const [destination, setDestination] = useState([])
+  const [buttonClicked, setButtonClicked] = useState(false)
+  const [km, setKm] = useState()
+  let co2 = Math.round((km * 122.4) /1000)
+  let bottles = Math.round(co2 * 3)
+
+
+
+
 //SEARCH BAR RENDERING
 return (
   // fdfa
@@ -82,8 +81,9 @@ return (
       onSelect={async (address)=>{
         try{
           const results1 = await getGeocode({ address });
-          const {lat, lng } = await getLatLng(results1[0])
-          console.log(lat,lng) //CHANGE THIS TO POINT TO DISTANCE MATRIX
+          const originRes = await getLatLng(results1[0])
+          console.log(originRes)
+          setOrigin(originRes) //CHANGE THIS TO POINT TO DISTANCE MATRIX
         } catch (error){
           console.log("error!")
         }
@@ -109,8 +109,9 @@ return (
       onSelect={async (address)=>{
         try{
           const results2 = await getGeocode({ address });
-          const {lat, lng } = await getLatLng(results2[0])
-          console.log(lat,lng) //CHANGE THIS TO POINT TO DISTANCE MATRIX
+          const destRes = await getLatLng(results2[0])
+          console.log(destRes)
+          setDestination(destRes) //CHANGE THIS TO POINT TO DISTANCE MATRIX
         } catch (error){
           console.log("error!")
         }
@@ -130,6 +131,33 @@ return (
         ))}
       </ComboboxPopover>
     </Combobox>
+    <button onClick={() => setButtonClicked(true)}>
+      Lets Go
+    </button>
+    
+    {buttonClicked ? 
+      <DistanceMatrixService 
+        options={{
+          destinations: [{lat:destination.lat, lng:destination.lng}],
+          origins: [{lng:origin.lng, lat:origin.lat}],
+          travelMode: "DRIVING",
+        }}
+        callback = {(response) => {
+          console.log(parseInt(response.rows[0].elements[0].distance.text));  
+          setKm(parseInt(response.rows[0].elements[0].distance.text));  
+          console.log(origin.lat,origin.lng); 
+          console.log(destination.lat, destination.lng);
+          setButtonClicked(false)
+        }}
+      />  : <> </>
+    }
+
+      <div><b>{km}</b>Kilometers</div>
+      <div><b>{co2}</b> Kg of Carbon Dioxide</div>
+      <div>To date, mymizu users have saved a total of 26,032Kg's of C02!</div>
+      <div>That's like driving back and forth from Tokyo to Kyoto 232 TIMES!!!</div>
+      <div>To Date, 3 500ml plastic bottles alone produce 1kg of CO2</div>
+
   </div>
   )
 };

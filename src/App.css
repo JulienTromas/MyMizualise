@@ -48,7 +48,7 @@ User buttons with straight corners
   text-align: center;
 }
 .bottleMonth {
-  height: 180px;
+  height: 225px;
 }
 
 #header {
@@ -72,13 +72,13 @@ User buttons with straight corners
 #whiteTransparentBlock {
   position: fixed;
   bottom: 0px;
-  height: 275px;
+  height: 260px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.897);
 }
 
 #November {
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 }
 
 #greenTopBanner {
@@ -145,7 +145,6 @@ User buttons with straight corners
 }
 
 .App-logo {
-  margin-top: 5px;
   height: 40vmin;
   pointer-events: none;
 }
@@ -168,8 +167,10 @@ User buttons with straight corners
 .routingDiv {
   display: flex;
   margin-bottom: 140px;
-  margin-left: 400px;
-  margin-right: 400px;
+
+  margin-left: 150px;
+  margin-right: 150px;
+
 }
 
 .boxTitles {

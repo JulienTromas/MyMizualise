@@ -4,9 +4,13 @@ import {BrowserRouter, Route, Switch, NavLink} from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Bottles from "./components/Bottles";
+import "./App.css";
+import Background from "./img/pexels-daria-shevtsova-1680140.jpg";
 import CarbonDioxyde from "./components/CarbonDioxyde";
 import "./App.css";
 import axios from "axios";
+import MymizuLogo from "./img/mymizu-logo-1.svg";
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,10 +35,12 @@ function App() {
 
     <BrowserRouter>
       {currentView === "Homepage" ? (
+
         <Home currentView={currentView} setCurrentView={setCurrentView} />
       ) : (
 
         <div className="navbarDiv">
+
           <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}
@@ -60,7 +66,6 @@ function App() {
         </Switch>
       </div>
     </BrowserRouter>
-
   );
 }
 

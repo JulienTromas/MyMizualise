@@ -27,15 +27,8 @@ export default function Navbar({setCurrentView}) {
             My bottles
           </button>
         </NavLink>
-        <NavLink to="/Co2">
-          <button
-            className="navButton"
-            onClick={() => {
-              setCurrentView("CarbonDioxyde");
-            }}
-          >
-            My CO2
-          </button>
+        <NavLink to="/CarbonDioxyde">
+          <button>My CO2</button>
         </NavLink>
 
         {/* <p>{props.data.refill_amount}</p> */}

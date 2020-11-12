@@ -22,7 +22,6 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
 
   return (
     <>
-      <div id="#header_navbar">{/* <Navbar /> */}</div>
       {yPosition >= 76 && yPosition < 250 ? (
         <div id="greenTopBanner">
           <img src={shanghai} className="App-logo" alt="logo" />

@@ -91,6 +91,31 @@ User buttons with straight corners
   justify-content: center;
 }
 
+.navbarDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border: 1px solid black;
+  background-color: #dfeef5;
+}
+
+.navButton {
+  flex: 1;
+  background-color: transparent;
+  text-align: center;
+  /* font-weight: bold; */
+  border: solid;
+  padding: 18px 32px;
+  text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .header {
   text-align: center;
   font-family: "Nunito Sans", sans-serif;

@@ -7,8 +7,6 @@ import Bottles from "./components/Bottles";
 import CarbonDioxyde from "./components/CarbonDioxyde";
 import "./App.css";
 import axios from "axios";
-import Background from "./img/pexels-daria-shevtsova-1680140.jpg";
-import MymizuLogo from "./img/mymizu-logo-1.svg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,12 +29,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
       {currentView === "Homepage" ? (
         <Home currentView={currentView} setCurrentView={setCurrentView} />
       ) : (
-        <div>
-          <h1>This is not home!</h1>
+        <div className="navbarDiv">
+          <Navbar currentView={currentView} setCurrentView={setCurrentView} data={data} />
         </div>
       )}
       <div>

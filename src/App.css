@@ -107,21 +107,19 @@ User buttons with straight corners
   opacity: 1;
 }
 
-.routingBox {
+.routingDiv {
   display: flex;
+  margin-bottom: 250px;
 }
 
 .bottlesBox {
   flex: 1;
-  border: 2px solid black;
   margin: auto;
-  /* margin-right: 20px; */
   max-width: 400px;
 }
 
 .co2Box {
   flex: 1;
-  border: 2px solid black;
   margin: auto;
   max-width: 400px;
 }
@@ -130,4 +128,23 @@ h2 {
   text-align: center;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
+}
+
+.buttonBox {
+  text-align: center;
+}
+
+.routingButtons {
+  background-color: #dfeef5;
+  text-align: center;
+  border: none;
+  padding: 18px 32px;
+  text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.teamDiv {
+  padding: 60px;
+  background-color: #dfeef5;
 }

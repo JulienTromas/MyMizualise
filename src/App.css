@@ -120,6 +120,7 @@ User buttons with straight corners
 }
 
 .App-logo {
+  margin-top: 6px;
   height: 40vmin;
   pointer-events: none;
 }
@@ -188,7 +189,6 @@ p {
 .routingButtons {
   background-color: #dfeef5;
   text-align: center;
-  /* font-weight: bold; */
   border: none;
   padding: 18px 32px;
   text-align: center;

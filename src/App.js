@@ -14,19 +14,19 @@ function App() {
   const [currentView, setCurrentView] = useState("Homepage");
   const [scroll, setScroll] = useState(0);
 
-  async function getData() {
-    await axios({
-      method: "GET",
-      url: "/api/refills",
-    }).then((res) => {
-      setData(res.data);
-      console.log(data.refill_amount);
-    });
-  }
+  // async function getData() {
+  //   await axios({
+  //     method: "GET",
+  //     url: "/api/refills",
+  //   }).then((res) => {
+  //     setData(res.data);
+  //     console.log(data.refill_amount);
+  //   });
+  // }
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <BrowserRouter>

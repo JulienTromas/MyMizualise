@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import logo from "../img/d0d2bfee495ec3e77dbc41f188eb9acf.svg";
 import burg from "../img/burj-khalifa.svg";
 import shanghai from "../img/oriental-pearl-tower.svg";
+import godzilla from "../img/godzilla.svg";
 // import styled, {keyframes} from "styled-components";
 // import {bounce} from "react-animations";
 
@@ -32,8 +33,8 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           <img src={burg} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 427 && yPosition < 600 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "orange"}}>
-          April
+        <div id="greenTopBanner" style={{backgroundColor: "#EF452E"}}>
+          <img src={godzilla} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 600 && yPosition < 778 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
@@ -90,12 +91,15 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In March of 2020, we prevented another<em>3115 plastic bottles</em> from
               being used
             </p>
-            <p>Now they're as tall as 2 Burj Khalifas!</p>
+            <p>
+              Now they're as tall as 2 Burj Khalifas, the tallest building in the world!
+            </p>
           </div>
           <div id="April" className="bottleMonth">
             <p>
               In April of 2020, we prevented <em>2468 plastic bottles</em> from being used
             </p>
+            <p>All together that's the height of 7 Godzillas!</p>
           </div>
           <div id="May" className="bottleMonth">
             <p>

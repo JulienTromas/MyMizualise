@@ -41,13 +41,14 @@ User buttons with straight corners
 #months {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
+  font-size: 28px;
   margin-top: 520px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .bottleMonth {
-  height: 160px;
+  height: 180px;
 }
 
 #header {
@@ -74,7 +75,7 @@ User buttons with straight corners
   bottom: 0px;
   height: 275px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.883);
+  background-color: rgba(255, 255, 255, 0.897);
 }
 
 #November {
@@ -119,6 +120,7 @@ User buttons with straight corners
 }
 
 .App-logo {
+  margin-top: 5px;
   height: 40vmin;
   pointer-events: none;
 }
@@ -187,7 +189,6 @@ p {
 .routingButtons {
   background-color: #dfeef5;
   text-align: center;
-  /* font-weight: bold; */
   border: none;
   padding: 18px 32px;
   text-align: center;
@@ -214,5 +215,4 @@ p {
   height: auto;
   max-width: 100px;
   vertical-align: -36px;
-}
 }

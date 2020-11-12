@@ -2,6 +2,9 @@
   "name": "mymizualise",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.18.4"
+  },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@testing-library/jest-dom": "^5.11.4",
@@ -23,7 +26,6 @@
     "react-scripts": "4.0.0",
     "styled-components": "^5.2.1"
   },
-  "proxy": "http://localhost:8080",
   "scripts": {
     "server": "node server.js",
     "start": "react-scripts start",
@@ -69,7 +71,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": "http://localhost:5000"
+    ]
   }
 }

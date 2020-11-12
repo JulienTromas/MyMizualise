@@ -41,8 +41,8 @@ function App() {
             <h1>{data.refill_amount}</h1> */}
           </div>
           <div className="routingDiv">
-            <div className="bottlesBox">
-              <h2>Plastic Bottles Saved</h2>
+            <div className="routeBoxes">
+              <p className="boxTitles">Plastic Bottles Saved</p>
               <p className="textDescription">
                 The amount of plastic water bottles that mymizu's users have saved are
                 recorded everyone month and can be beautifully visualized here.
@@ -60,8 +60,8 @@ function App() {
                 </NavLink>
               </div>
             </div>
-            <div className="co2Box">
-              <h2>CO2 Saved</h2>
+            <div className="routeBoxes">
+              <p className="boxTitles">CO2 Saved</p>
               <p className="textDescription">
                 Try our handy map tool to understand how much CO2 you can save by using
                 mymizu!

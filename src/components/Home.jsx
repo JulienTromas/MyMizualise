@@ -42,7 +42,7 @@ export default function Home({CurrentView, setCurrentView}) {
               mymizu!
             </p>
             <div className="buttonBox">
-              <NavLink to="/Co2">
+              <NavLink to="/CarbonDioxyde">
                 <button
                   className="routingButtons"
                   onClick={() => {

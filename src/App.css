@@ -94,27 +94,38 @@ User buttons with straight corners
 
 .navbarDiv {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   width: 100%;
   position: fixed;
   top: 0;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: #dfeef5;
 }
 
-.navButton {
+.navButtonDiv {
   flex: 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navButton {
+  /* flex: 1; comment out again*/
   background-color: transparent;
   text-align: center;
-  /* font-weight: bold; */
-  border: solid;
-  padding: 18px 32px;
+  /*font-weight: bold; comment out again*/
+  border: transparent;
+  padding: 18px 0px;
   text-align: center;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   cursor: pointer;
+}
+
+.navFillerDiv {
+  height: 65px;
 }
 
 .header {
@@ -240,4 +251,35 @@ p {
   height: auto;
   max-width: 100px;
   vertical-align: -36px;
+}
+
+/*CARBON MAP STYLES*/
+.map-wrap {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.map-input {
+  flex: 1;
+}
+
+.map-map {
+  flex: 1;
+}
+
+.combo-box {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+.combo-input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
 }

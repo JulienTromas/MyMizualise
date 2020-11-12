@@ -6,6 +6,10 @@ import logo from "../img/d0d2bfee495ec3e77dbc41f188eb9acf.svg";
 import burg from "../img/burj-khalifa.svg";
 import shanghai from "../img/oriental-pearl-tower.svg";
 import godzilla from "../img/godzilla.svg";
+import paris from "../img/paris.svg";
+import fuji from "../img/mount-fuji.svg";
+import gundam from "../img/gundam.svg";
+import pyramid from "../img/pyramids.svg";
 // import styled, {keyframes} from "styled-components";
 // import {bounce} from "react-animations";
 
@@ -37,20 +41,20 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           <img src={godzilla} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 600 && yPosition < 778 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
-          May
+        <div id="greenTopBanner" style={{backgroundColor: "#F2F79E"}}>
+          <img src={paris} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 778 && yPosition < 954 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "orange"}}>
-          June
+        <div id="greenTopBanner" style={{backgroundColor: "#6B9AC4"}}>
+          <img src={fuji} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 954 && yPosition < 1131 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "purple"}}>
-          July
+        <div id="greenTopBanner" style={{backgroundColor: "#7D80DA"}}>
+          <img src={gundam} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 1131 && yPosition < 1306 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "brown"}}>
-          August
+        <div id="greenTopBanner" style={{backgroundColor: "#A19568"}}>
+          <img src={pyramid} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 1306 && yPosition < 1482 ? (
         <div id="greenTopBanner" style={{backgroundColor: "aqua"}}>
@@ -105,22 +109,26 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
             <p>
               In May of 2020, we prevented <em>2678 plastic bottles</em> from being used
             </p>
+            <p>The bottles are as tall as 8 Eiffel Towers!</p>
           </div>
           <div id="June" className="bottleMonth">
             <p>
               In June of 2020, we prevented <em>4147 plastic bottles</em> from being used
             </p>
+            <p>Bottle mountain is as tall as Mount Fuji!</p>
           </div>
           <div id="July" className="bottleMonth">
             <p>
               In July of 2020, we prevented <em>5336 plastic bottles</em> from being used
             </p>
+            <p>The bottles are taller than 220 gundams put together!</p>
           </div>
           <div id="August" className="bottleMonth">
             <p>
               In August of 2020, we prevented <em>5747 plastic bottles</em> from being
               used
             </p>
+            <p>Now the bottles are as tall as 39 Egyptian pyramids!</p>
           </div>
           <div id="September" className="bottleMonth">
             <p>

@@ -48,7 +48,7 @@ User buttons with straight corners
   text-align: center;
 }
 .bottleMonth {
-  height: 160px;
+  height: 180px;
 }
 
 #header {
@@ -120,7 +120,7 @@ User buttons with straight corners
 }
 
 .App-logo {
-  margin-top: 6px;
+  margin-top: 5px;
   height: 40vmin;
   pointer-events: none;
 }

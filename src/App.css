@@ -68,6 +68,7 @@ User buttons with straight corners
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 #whiteTransparentBlock {
@@ -87,7 +88,7 @@ User buttons with straight corners
   top: 125px;
   height: 400px;
   width: 100%;
-  background-color: green;
+  background-color: white;
   overflow: "hidden";
   display: flex;
   justify-content: center;
@@ -96,7 +97,7 @@ User buttons with straight corners
 .header {
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
-  background-color: white;
+  background-color: rgb(37, 37, 37);
   padding: 60px;
   opacity: 0.8;
 }
@@ -107,6 +108,7 @@ User buttons with straight corners
   color: white;
   font-size: 80px;
   opacity: 1;
+  /* text-shadow: 3px 3px #000000; */
 }
 
 .headerNote {
@@ -123,16 +125,16 @@ User buttons with straight corners
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s linear;
   }
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateZ(100deg);
   }
 } */
 
@@ -155,6 +157,12 @@ User buttons with straight corners
 
 h2 {
   text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+p {
+  font-weight: bold;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
 }

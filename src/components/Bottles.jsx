@@ -3,6 +3,8 @@ import React, {useState, useEffect} from "react";
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 import Navbar from "./Navbar";
 import logo from "../img/d0d2bfee495ec3e77dbc41f188eb9acf.svg";
+import burg from "../img/burj-khalifa.svg";
+import shanghai from "../img/oriental-pearl-tower.svg";
 // import styled, {keyframes} from "styled-components";
 // import {bounce} from "react-animations";
 
@@ -22,10 +24,12 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
     <>
       <div id="#header_navbar">{/* <Navbar /> */}</div>
       {yPosition >= 76 && yPosition < 250 ? (
-        <div id="greenTopBanner">February</div>
+        <div id="greenTopBanner">
+          <img src={shanghai} className="App-logo" alt="logo" />
+        </div>
       ) : yPosition >= 250 && yPosition < 427 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "red"}}>
-          March
+        <div id="greenTopBanner" style={{backgroundColor: "white"}}>
+          <img src={burg} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 427 && yPosition < 600 ? (
         <div id="greenTopBanner" style={{backgroundColor: "orange"}}>
@@ -80,12 +84,14 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In February of 2020, we prevented an additional<em>2988 plastic bottles</em>{" "}
               from being used
             </p>
+            <p>Now the bottles are as tall as the Shanghai Tower!</p>
           </div>
           <div id="March" className="bottleMonth">
             <p>
               In March of 2020, we prevented another<em>3115 plastic bottles</em> from
               being used
             </p>
+            <p>Now they're as tall as 2 Burj Khalifas!</p>
           </div>
           <div id="April" className="bottleMonth">
             <p>

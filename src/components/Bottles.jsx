@@ -24,11 +24,11 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
     <>
       <div id="#header_navbar">{/* <Navbar /> */}</div>
       {yPosition >= 76 && yPosition < 250 ? (
-        <div id="greenTopBanner">
+        <div id="greenTopBanner" style={{backgroundColor: "#7BB668"}}>
           <img src={shanghai} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 250 && yPosition < 427 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "white"}}>
+        <div id="greenTopBanner" style={{backgroundColor: "#E39EC1"}}>
           <img src={burg} className="App-logo" alt="logo" />
         </div>
       ) : yPosition >= 427 && yPosition < 600 ? (
@@ -71,10 +71,9 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
       <div id="wrapper">
         <div id="whiteTransparentBlock"></div>
         <div id="months">
-          <div>Number of plastic bottles saved by MyMizu users</div>
           <div id="January" className="bottleMonth">
             <p>
-              In January of 2020, we prevented <em>1,892 plastic bottles</em> from being
+              In January of 2020, we prevented <b>1,892 plastic bottles</b> from being
               used
             </p>
             <p>When stacked, they are as tall as the Empire State Building!</p>

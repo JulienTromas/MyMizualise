@@ -41,6 +41,7 @@ User buttons with straight corners
 #months {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
+  font-size: 28px;
   margin-top: 520px;
   justify-content: center;
   align-items: center;
@@ -74,7 +75,7 @@ User buttons with straight corners
   bottom: 0px;
   height: 275px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.883);
+  background-color: rgba(255, 255, 255, 0.938);
 }
 
 #November {
@@ -214,5 +215,4 @@ p {
   height: auto;
   max-width: 100px;
   vertical-align: -36px;
-}
 }

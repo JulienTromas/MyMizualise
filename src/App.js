@@ -32,30 +32,48 @@ function App() {
             <p className="headerNote">
               A guide to visualizing mymizu's impact on the environment
             </p>
-          </div>
-          <div>
             <button onClick={getData}>Show me the Money</button>
-            <div>
-              <h1>{data.refill_amount}</h1>
+            <h1>{data.refill_amount}</h1>
+          </div>
+          <div className="routingDiv">
+            <div className="bottlesBox">
+              <h2>Plastic Bottles Saved</h2>
+              <p>
+                The amount of plastic water bottles that mymizu's users have saved are
+                recorded and beautifully visualized here.
+              </p>
+              <div className="buttonBox">
+                <NavLink to="/Bottles">
+                  <button
+                    className="routingButtons"
+                    onClick={() => {
+                      setCurrentView("Bottles");
+                    }}
+                  >
+                    SEE BOTTLES SAVED HERE
+                  </button>
+                </NavLink>
+              </div>
             </div>
-            <NavLink to="/Bottles">
-              <button
-                onClick={() => {
-                  setCurrentView("Bottles");
-                }}
-              >
-                My bottles
-              </button>
-            </NavLink>
-            <NavLink to="/Co2">
-              <button
-                onClick={() => {
-                  setCurrentView("CarbonDioxyde");
-                }}
-              >
-                My CO2
-              </button>
-            </NavLink>
+            <div className="co2Box">
+              <h2>CO2 Saved</h2>
+              <p>This is the data for CO2 in kilograms that mymizu's users have saved.</p>
+              <div className="buttonBox">
+                <NavLink to="/Co2">
+                  <button
+                    className="routingButtons"
+                    onClick={() => {
+                      setCurrentView("CarbonDioxyde");
+                    }}
+                  >
+                    SEE CO2 SAVED HERE
+                  </button>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+          <div className="teamDiv">
+            <h2>Brought to you by Team Wave of Code Chrysalis</h2>
           </div>
         </div>
       ) : (

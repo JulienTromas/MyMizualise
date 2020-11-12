@@ -32,30 +32,34 @@ function App() {
             <p className="headerNote">
               A guide to visualizing mymizu's impact on the environment
             </p>
-          </div>
-          <div>
             <button onClick={getData}>Show me the Money</button>
-            <div>
-              <h1>{data.refill_amount}</h1>
+            <h1>{data.refill_amount}</h1>
+          </div>
+          <div className="routingBox">
+            <div className="bottlesBox">
+              <h2>Plastic Bottles Saved</h2>
+              <NavLink to="/Bottles">
+                <button
+                  onClick={() => {
+                    setCurrentView("Bottles");
+                  }}
+                >
+                  My bottles
+                </button>
+              </NavLink>
             </div>
-            <NavLink to="/Bottles">
-              <button
-                onClick={() => {
-                  setCurrentView("Bottles");
-                }}
-              >
-                My bottles
-              </button>
-            </NavLink>
-            <NavLink to="/Co2">
-              <button
-                onClick={() => {
-                  setCurrentView("CarbonDioxyde");
-                }}
-              >
-                My CO2
-              </button>
-            </NavLink>
+            <div className="co2Box">
+              <h2>This is the data for CO2</h2>
+              <NavLink to="/Co2">
+                <button
+                  onClick={() => {
+                    setCurrentView("CarbonDioxyde");
+                  }}
+                >
+                  My CO2
+                </button>
+              </NavLink>
+            </div>
           </div>
         </div>
       ) : (

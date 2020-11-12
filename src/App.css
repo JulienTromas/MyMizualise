@@ -22,12 +22,17 @@ User buttons with straight corners
   position: fixed;
 }
 
-#wrapper{
-  background-image: linear-gradient(transparent 10%, #050505 30%, black 70%, transparent 90%);
-  -webkit-background-clip:text;
+#wrapper {
+  background-image: linear-gradient(
+    transparent 10%,
+    #050505 30%,
+    black 70%,
+    transparent 90%
+  );
+  -webkit-background-clip: text;
 }
 
-#wrapper > *{
+#wrapper > * {
   color: transparent;
 }
 
@@ -38,7 +43,6 @@ User buttons with straight corners
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 .bottleMonth {
   height: 160px;
@@ -85,7 +89,6 @@ User buttons with straight corners
   font-family: "Nunito Sans", sans-serif;
   background-color: white;
   padding: 60px;
-  height: 200px;
   opacity: 0.8;
 }
 
@@ -102,4 +105,29 @@ User buttons with straight corners
   color: white;
   font-size: 30px;
   opacity: 1;
+}
+
+.routingBox {
+  display: flex;
+}
+
+.bottlesBox {
+  flex: 1;
+  border: 2px solid black;
+  margin: auto;
+  /* margin-right: 20px; */
+  max-width: 400px;
+}
+
+.co2Box {
+  flex: 1;
+  border: 2px solid black;
+  margin: auto;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
 }

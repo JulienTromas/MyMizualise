@@ -31,43 +31,43 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
   return (
     <>
       <div id="#header_navbar">{/* <Navbar /> */}</div>
-      {yPosition >= 117 && yPosition < 363 ? (
+      {yPosition >= 76 && yPosition < 250 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7BB668"}}>
           <img src={shanghai} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 363 && yPosition < 615 ? (
+      ) : yPosition >= 250 && yPosition < 427 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#E39EC1"}}>
           <img src={burg} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 615 && yPosition < 869 ? (
+      ) : yPosition >= 427 && yPosition < 600 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#EF452E"}}>
           <img src={godzilla} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 869 && yPosition < 1123 ? (
+      ) : yPosition >= 600 && yPosition < 778 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#F2F79E"}}>
           <img src={paris} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 1123 && yPosition < 1379 ? (
+      ) : yPosition >= 778 && yPosition < 954 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#6B9AC4"}}>
           <img src={liberty} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 1379 && yPosition < 1629 ? (
+      ) : yPosition >= 954 && yPosition < 1131 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7D80DA"}}>
           <img src={gundam} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 1629 && yPosition < 1883 ? (
+      ) : yPosition >= 1131 && yPosition < 1306 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#A19568"}}>
           <img src={pyramid} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 1883 && yPosition < 2140 ? (
+      ) : yPosition >= 1306 && yPosition < 1482 ? (
         <div id="greenTopBanner" style={{backgroundColor: "aqua"}}>
           <img src={fuji} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 2140 && yPosition < 2390 ? (
+      ) : yPosition >= 1482 && yPosition < 1658 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#212531"}}>
           <img src={space} className="App-logo" alt="logo" />
         </div>
-      ) : yPosition >= 2390 ? (
+      ) : yPosition >= 1658 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
           <img src={everest} className="App-logo" alt="logo" />
         </div>
@@ -152,14 +152,13 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In November of 2020, we prevented <em>4120 plastic bottles</em> from being
               used so far
             </p>
-            <p>Bottle mountain is as tall as 2 Mount Everests and growing!</p>
+            <p>Bottle mountain is as tall as 2 Mount Everests!</p>
           </div>
         </div>
       </div>
     </>
   );
 }
-
 /*
 JANUARY: 1892     946L     382m    208120Y    39kg
 FEBRUARY: 4880    603.5m   102.5kg   536800 Y

@@ -1,5 +1,121 @@
-.App {
+/*
+Have margin around the logo which is equivalent to 30% of the logo's height.
+
+PRIMARY COLORS:
+General font color => #2D383F
+Emphasis font color => #2E98D1
+Main background color => #DFEEF5
+
+ACCENT COLORS:
+General font color => #3F6A88
+General font color => #7BA4B8
+General font color => #E5E5E7
+
+Use beautiful nature photography with bold text
+
+User buttons with straight corners
+
+*/
+
+.scrollTracker {
+  position: fixed;
+}
+
+/* #wrapper{
+  background-image: linear-gradient(transparent 0%, #050505 30%, black 70%, transparent 90%);
+  -webkit-background-clip:text;
+#wrapper {
+  background-image: linear-gradient(
+    transparent 10%,
+    #050505 30%,
+    black 70%,
+    transparent 90%
+  );
+  -webkit-background-clip: text;
+}
+
+#wrapper > * {
+  color: transparent;
+} */
+
+#months {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 520px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+.bottleMonth {
+  height: 160px;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  height: 125px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.808);
+}
+
+
+#topBanner {
+  position: fixed;
+  top: 125px;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+#whiteTransparentBlock {
+  position: fixed;
+  bottom: 0px;
+  height: 275px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.883);
+}
+
+#November {
+  margin-bottom: 250px;
+}
+
+#greenTopBanner {
+  position: fixed;
+  top: 125px;
+  height: 400px;
+  width: 100%;
+  background-color: white;
+  overflow: "hidden";
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: white;
+  padding: 24px;
+  opacity: 0.8;
+  margin-top: -40px;
+}
+
+.headerText {
+  font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  font-size: 100px;
+  opacity: 1;
+  margin-bottom: 0px;
+  /* text-shadow: 3px 3px #000000; */
+}
+
+.headerNote {
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  font-size: 36px;
+  opacity: 1;
 }
 
 .App-logo {
@@ -7,32 +123,96 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateZ(100deg);
   }
+} */
+
+.routingDiv {
+  display: flex;
+  margin-bottom: 140px;
+  margin-left: 150px;
+  margin-right: 150px;;
+}
+
+.bottlesBox {
+  flex: 1;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 400px;
+}
+
+.co2Box {
+  flex: 1;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 30px;
+}
+
+.textDescription {
+  font-size: 20px;
+}
+
+p {
+  font-weight: bold;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.buttonBox {
+  text-align: center;
+}
+
+.routingButtons {
+  background-color: #dfeef5;
+  text-align: center;
+  /* font-weight: bold; */
+  border: none;
+  padding: 18px 32px;
+  text-align: center;
+  color: #2d383f;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footerDiv {
+  padding-bottom: 10px;
+  padding-top: 3px;
+  background-color: #dfeef5;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.footerText {
+  margin-top: 10px;
+}
+
+.mymizuLogo {
+  cursor: pointer;
+  height: auto;
+  max-width: 100px;
+  vertical-align: -36px;
+}
 }

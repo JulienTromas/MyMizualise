@@ -7,6 +7,7 @@ import CarbonDioxyde from "./components/CarbonDioxyde";
 import "./App.css";
 import axios from "axios";
 import Background from "./img/pexels-daria-shevtsova-1680140.jpg";
+import MymizuLogo from "./img/mymizu-logo-1.svg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -42,9 +43,9 @@ function App() {
           <div className="routingDiv">
             <div className="bottlesBox">
               <h2>Plastic Bottles Saved</h2>
-              <p>
+              <p className="textDescription">
                 The amount of plastic water bottles that mymizu's users have saved are
-                recorded and beautifully visualized here.
+                recorded everyone month and can be beautifully visualized here.
               </p>
               <div className="buttonBox">
                 <NavLink to="/Bottles">
@@ -61,7 +62,10 @@ function App() {
             </div>
             <div className="co2Box">
               <h2>CO2 Saved</h2>
-              <p>This is the data for CO2 in kilograms that mymizu's users have saved.</p>
+              <p className="textDescription">
+                Try our handy map tool to understand how much CO2 you can save by using
+                mymizu!
+              </p>
               <div className="buttonBox">
                 <NavLink to="/Co2">
                   <button
@@ -76,8 +80,13 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="teamDiv">
-            <h2>Brought to you by Team Wave of Code Chrysalis</h2>
+          <div className="footerDiv">
+            <h2>
+              <span className="footerText">Team Wave X </span>
+              <a href="https://www.mymizu.co/">
+                <img className="mymizuLogo" src={MymizuLogo} alt="mymizu" />
+              </a>
+            </h2>
           </div>
         </div>
       ) : (

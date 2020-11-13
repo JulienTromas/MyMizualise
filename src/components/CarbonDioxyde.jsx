@@ -54,7 +54,7 @@ export default function Map() {
         </div>
         <div className="map-map">
           <GoogleMap
-            id="map"
+            className="map"
             mapContainerStyle={mapContainerStyle}
             zoom={18}
             center={center}
@@ -83,14 +83,17 @@ function Search() {
   const [origin, setOrigin] = useState([]);
   const [destination, setDestination] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [km, setKm] = useState();
-  let co2 = Math.round((km * 122.4) / 1000);
-  let bottles = Math.round(co2 * 3);
+  const [km, setKm] = useState(0);
+  let co2 = 0;
+  let bottles = 0;
+  co2 = Math.round((km * 122.4) / 1000);
+  bottles = Math.round(co2 * 3);
 
   //SEARCH BAR RENDERING
   return (
     // fdfa
     <div>
+      <div className="input-wrapper"></div>
       <div className="destination-input">
         <Combobox
           className="combo-box"
@@ -150,8 +153,11 @@ function Search() {
           </ComboboxPopover>
         </Combobox>
       </div>
+
       <div>
-        <button onClick={() => setButtonClicked(true)}>Lets Go</button>
+        <button className="go-button" onClick={() => setButtonClicked(true)}>
+          Lets Go
+        </button>
       </div>
       {buttonClicked ? (
         <DistanceMatrixService

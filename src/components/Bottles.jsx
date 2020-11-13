@@ -31,48 +31,48 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
   return (
     <>
       <div className="navFillerDiv"></div>
-      {yPosition >= 76 && yPosition < 250 ? (
+      {yPosition >= 122 && yPosition < 446 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7BB668"}}>
-          <img src={shanghai} className="App-logo" alt="logo" />
+          <img src={shanghai} className="App-logo" alt="Shanghai Tower" />
         </div>
-      ) : yPosition >= 250 && yPosition < 427 ? (
+      ) : yPosition >= 446 && yPosition < 770 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#E39EC1"}}>
-          <img src={burg} className="App-logo" alt="logo" />
+          <img src={burg} className="App-logo" alt="Burj Khalifa" />
         </div>
-      ) : yPosition >= 427 && yPosition < 600 ? (
+      ) : yPosition >= 770 && yPosition < 1102 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#EF452E"}}>
-          <img src={godzilla} className="App-logo" alt="logo" />
+          <img src={godzilla} className="App-logo" alt="Godzilla" />
         </div>
-      ) : yPosition >= 600 && yPosition < 778 ? (
+      ) : yPosition >= 1102 && yPosition < 1438 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#F2F79E"}}>
-          <img src={paris} className="App-logo" alt="logo" />
+          <img src={paris} className="App-logo" alt="Eiffel Tower" />
         </div>
-      ) : yPosition >= 778 && yPosition < 954 ? (
+      ) : yPosition >= 1438 && yPosition < 1757 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#6B9AC4"}}>
-          <img src={liberty} className="App-logo" alt="logo" />
+          <img src={liberty} className="App-logo" alt="Statue of Liberty" />
         </div>
-      ) : yPosition >= 954 && yPosition < 1131 ? (
+      ) : yPosition >= 1757 && yPosition < 2085 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7D80DA"}}>
-          <img src={gundam} className="App-logo" alt="logo" />
+          <img src={gundam} className="App-logo" alt="Gundam" />
         </div>
-      ) : yPosition >= 1131 && yPosition < 1306 ? (
+      ) : yPosition >= 2085 && yPosition < 2413 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#A19568"}}>
-          <img src={pyramid} className="App-logo" alt="logo" />
+          <img src={pyramid} className="App-logo" alt="Pyramids" />
         </div>
-      ) : yPosition >= 1306 && yPosition < 1482 ? (
+      ) : yPosition >= 2413 && yPosition < 2741 ? (
         <div id="greenTopBanner" style={{backgroundColor: "aqua"}}>
-          <img src={fuji} className="App-logo" alt="logo" />
+          <img src={fuji} className="App-logo" alt="Mount Fuji" />
         </div>
-      ) : yPosition >= 1482 && yPosition < 1658 ? (
+      ) : yPosition >= 2741 && yPosition < 3073 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#212531"}}>
-          <img src={space} className="App-logo" alt="logo" />
+          <img src={space} className="App-logo" alt="Space station" />
         </div>
-      ) : yPosition >= 1658 ? (
+      ) : yPosition >= 3073 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
-          <img src={everest} className="App-logo" alt="logo" />
+          <img src={everest} className="App-logo" alt="Mount Everest" />
         </div>
       ) : (
-        <div id="topBanner">
+        <div id="greenTopBanner" style={{backgroundColor: "#D6D6D6"}}>
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       )}
@@ -88,8 +88,8 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           </div>
           <div id="February" className="bottleMonth">
             <p>
-              In February of 2020, we prevented an additional<em>2988 plastic bottles</em>{" "}
-              from being used
+              In February of 2020, we prevented an additional{" "}
+              <em>2988 plastic bottles</em> from being used
             </p>
             <p>Now the bottles are as tall as the Shanghai Tower!</p>
           </div>
@@ -131,7 +131,10 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In August of 2020, we prevented <em>5747 plastic bottles</em> from being
               used
             </p>
-            <p>Now the bottles are as tall as 39 Egyptian pyramids!</p>
+            <p>
+              Now the bottles are as tall as 39 Egyptian pyramids stacked on top of each
+              other!
+            </p>
           </div>
           <div id="September" className="bottleMonth">
             <p>
@@ -152,7 +155,7 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In November of 2020, we prevented <em>4120 plastic bottles</em> from being
               used so far
             </p>
-            <p>Bottle mountain is as tall as 2 Mount Everests!</p>
+            <p>Bottle mountain is as tall as 2 Mount Everests and growing!</p>
           </div>
         </div>
       </div>

@@ -45,17 +45,6 @@ export default function Navbar({setCurrentView}) {
             </button>
           </NavLink>
         </div>
-
-        {/* <p>{props.data.refill_amount}</p> */}
-        {/* {props.currentView === "Bottles" ? (
-          <div>
-            <Bottles />
-          </div>
-        ) : (
-          <div>
-            <CarbonDioxyde />
-          </div>
-        )} */}
       </div>
     </>
   );

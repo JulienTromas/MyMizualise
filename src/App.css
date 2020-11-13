@@ -42,13 +42,13 @@ User buttons with straight corners
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   font-size: 28px;
-  margin-top: 520px;
+  margin-top: 420px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .bottleMonth {
-  height: 225px;
+  height: 300px;
 }
 
 #header {
@@ -57,16 +57,6 @@ User buttons with straight corners
   height: 125px;
   width: 100%;
   background-color: rgba(255, 0, 0, 0.808);
-}
-
-#topBanner {
-  position: fixed;
-  top: 125px;
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: white;
 }
 
 #whiteTransparentBlock {
@@ -78,12 +68,12 @@ User buttons with straight corners
 }
 
 #November {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 }
 
 #greenTopBanner {
   position: fixed;
-  top: 125px;
+  top: 63px;
   height: 400px;
   width: 100%;
   background-color: white;
@@ -157,7 +147,7 @@ User buttons with straight corners
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 39.2vmin;
   pointer-events: none;
 }
 
@@ -257,8 +247,12 @@ p {
 /*CARBON MAP STYLES*/
 .map-wrap {
   display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
+}
+
+.map {
+  position: fixed;
+  display: block;
+  z-index: 10;
 }
 
 .map-input {
@@ -267,30 +261,35 @@ p {
 
 .map-map {
   flex: 1;
+  z-index: -1;
 }
 
 .blue-space {
-  width: 100vw;
-  height: 300px;
+  padding-bottom: 10px;
+  padding-top: 3px;
   background-color: #dfeef5;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 200px;
 }
-.white-space {
-  width: 100vw;
-  height: 300px;
-  background-color: white;
-}
-/* .combo-box {
+
+.combo-box {
   position: relative;
   top: 1rem;
   left: 50%;
-  transform: translateX(-50%);
+  padding: 10px;
   width: 100%;
   max-width: 400px;
   z-index: 10;
-} */
+}
 
-/* .combo-input {
+.combo-input {
   padding: 0.5rem;
   font-size: 1.5rem;
   width: 100%;
-} */
+}
+
+.go-button {
+  width: 90px;
+  height: 40px;
+}

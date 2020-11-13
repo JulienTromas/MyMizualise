@@ -1,6 +1,4 @@
-<p align="center"><a href="https://ibb.co/6YhHJs4"><img src="https://i.ibb.co/G7wW3PV/Screen-Shot-2020-10-31-at-7-30-45-PM.png" alt="Screen-Shot-2020-10-31-at-7-30-45-PM" border="0"></a></p>
 
-><b>SpotS</b> is your go to driving companion giving you navigational access to the complete network of <b>Flying K</b> travel centers
 
 # Table of Contents
   * [Introduction](#Introduction)
@@ -23,12 +21,11 @@ Introduction
 
 ## Usage
 
-Upon opening the app, use the drop down menu to select which state and city you are searching for a FlyingK stop.  After clicking the search button, the map will mark all existing FlyingK stops in the specified location. Click on the marker to receive the name and address of the stop, which can then be copied and pasted into any preferred navigation app of choice.  Click on the reset button to reset the map and begin a new search.
 
 
 ## Developers
 
-<b>SpotS</b> is a navigational app that is built on an express server configured to use Knex to update and retrieve from a postgresQL and send data to a front end built around native REACT. The app is currently deployed through Heroku
+
 
 
 #### Getting Started
@@ -66,7 +63,7 @@ yarn start
 <br>
 The yarn build file will compile the code so that we can execute with yarn start. When yarn start runs, it will automatically run the knex migrations files and build the tables within database truckstop. Next it will run the knex seeding files to populate your local database. 
 <br>
-At this point the application will run on <a href= "http://localhost:9000/">Localhost:9000 </a>
+At this point the application will run on <a href= "http://localhost:3000/">Localhost:3000 </a>
 <br>
 
 #### Creating and running Migrations
@@ -81,22 +78,10 @@ This wil generate a Knex migration file. The migration will run upon the next st
 
 ## Issues
 
-<b>Update 10.31.2020.v11</b>
-<br>
- When running in a local environment, windows users may find that the server is not connecting with their local Postgresql database. The development team is aware of this problem. 
 
 ## Team
 
-<a href= "https://github.com/kenny01123" >Kenny Ng <b>Tech Lead</b></a>
-<br>
-<br>
-<a href= "https://github.com/alexdang1993374">Alex Dang <b> React Front End</b></a>
-<br>
-<br>
-<a href= "https://github.com/Yoshi106">Yoshiaki Aibara <b>Postgres Backend & Heroku</b></a>
-<br>
-<br>
-<a href="https://github.com/Jaymontojo673">Jay Montojo <b>Postgres Backend & Heroku</b></a>
+
 
 
 ## License
@@ -105,4 +90,4 @@ Created during our time as <b>Code Chrysalis</b> students.
 
 Unlicensed
 
--Team Yoshi's Island
+-Team Wave

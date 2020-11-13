@@ -5,9 +5,9 @@
 # Table of Contents
   * [Introduction](#Introduction)
   * [Usage](#Usage)
-  * [Developers Corner](#Developers_Corner)
+  * [Developers](#Developers)
   * [Issues](#Issues)
-  * [The Team](#The_Team)
+  * [Team](#Team)
   * [License](#License)
 
 ## Introduction
@@ -26,7 +26,7 @@ Introduction
 Upon opening the app, use the drop down menu to select which state and city you are searching for a FlyingK stop.  After clicking the search button, the map will mark all existing FlyingK stops in the specified location. Click on the marker to receive the name and address of the stop, which can then be copied and pasted into any preferred navigation app of choice.  Click on the reset button to reset the map and begin a new search.
 
 
-## Developers Corner
+## Developers
 
 <b>SpotS</b> is a navigational app that is built on an express server configured to use Knex to update and retrieve from a postgresQL and send data to a front end built around native REACT. The app is currently deployed through Heroku
 
@@ -85,7 +85,7 @@ This wil generate a Knex migration file. The migration will run upon the next st
 <br>
  When running in a local environment, windows users may find that the server is not connecting with their local Postgresql database. The development team is aware of this problem. 
 
-## The Team
+## Team
 
 <a href= "https://github.com/kenny01123" >Kenny Ng <b>Tech Lead</b></a>
 <br>

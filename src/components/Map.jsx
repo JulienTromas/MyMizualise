@@ -50,7 +50,7 @@ export default function Map() {
     <div>
       <Search />
       <GoogleMap
-        id="map"
+        className="map"
         mapContainerStyle={mapContainerStyle}
         zoom={18}
         center={center}

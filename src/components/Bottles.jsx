@@ -30,49 +30,49 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
 
   return (
     <>
-      <div id="#header_navbar">{/* <Navbar /> */}</div>
-      {yPosition >= 76 && yPosition < 250 ? (
+      <div className="navFillerDiv"></div>
+      {yPosition >= 122 && yPosition < 376 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7BB668"}}>
           <img src={shanghai} className="App-logo" alt="Shanghai Tower" />
         </div>
-      ) : yPosition >= 250 && yPosition < 427 ? (
+      ) : yPosition >= 376 && yPosition < 628 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#E39EC1"}}>
           <img src={burg} className="App-logo" alt="Burj Khalifa" />
         </div>
-      ) : yPosition >= 427 && yPosition < 600 ? (
+      ) : yPosition >= 628 && yPosition < 880 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#EF452E"}}>
           <img src={godzilla} className="App-logo" alt="Godzilla" />
         </div>
-      ) : yPosition >= 600 && yPosition < 778 ? (
+      ) : yPosition >= 880 && yPosition < 1129 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#F2F79E"}}>
           <img src={paris} className="App-logo" alt="Eiffel Tower" />
         </div>
-      ) : yPosition >= 778 && yPosition < 954 ? (
+      ) : yPosition >= 1129 && yPosition < 1387 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#6B9AC4"}}>
           <img src={liberty} className="App-logo" alt="Statue of Liberty" />
         </div>
-      ) : yPosition >= 954 && yPosition < 1131 ? (
+      ) : yPosition >= 1387 && yPosition < 1640 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7D80DA"}}>
           <img src={gundam} className="App-logo" alt="Gundam" />
         </div>
-      ) : yPosition >= 1131 && yPosition < 1306 ? (
+      ) : yPosition >= 1640 && yPosition < 1893 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#A19568"}}>
           <img src={pyramid} className="App-logo" alt="Pyramids" />
         </div>
-      ) : yPosition >= 1306 && yPosition < 1482 ? (
+      ) : yPosition >= 1893 && yPosition < 2145 ? (
         <div id="greenTopBanner" style={{backgroundColor: "aqua"}}>
           <img src={fuji} className="App-logo" alt="Mount Fuji" />
         </div>
-      ) : yPosition >= 1482 && yPosition < 1658 ? (
+      ) : yPosition >= 2145 && yPosition < 2399 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#212531"}}>
           <img src={space} className="App-logo" alt="Space station" />
         </div>
-      ) : yPosition >= 1658 ? (
+      ) : yPosition >= 2399 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
           <img src={everest} className="App-logo" alt="Mount Everest" />
         </div>
       ) : (
-        <div id="topBanner">
+        <div id="greenTopBanner" style={{backgroundColor: "white"}}>
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       )}

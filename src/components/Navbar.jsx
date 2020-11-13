@@ -6,51 +6,43 @@ import {NavLink} from "react-router-dom";
 export default function Navbar({setCurrentView}) {
   return (
     <>
-      <div id="#header_navbar">
-        <NavLink to="/">
-          <button
-            alt="Homepage button"
-            className="navButton"
-            onClick={() => {
-              setCurrentView("Homepage");
-            }}
-          >
-            Home
-          </button>
-        </NavLink>
-        <NavLink to="/Bottles">
-          <button
-            alt="Plastic Bottles page button"
-            className="navButton"
-            onClick={() => {
-              setCurrentView("Bottles");
-            }}
-          >
-            My bottles
-          </button>
-        </NavLink>
-        <NavLink to="/CarbonDioxyde">
-          <button
-            alt="Carbon Dioxyde page button"
-            className="navButton"
-            onClick={() => {
-              setCurrentView("CarbonDioxyde");
-            }}
-          >
-            My CO2
-          </button>
-        </NavLink>
-
-        {/* <p>{props.data.refill_amount}</p> */}
-        {/* {props.currentView === "Bottles" ? (
-          <div>
-            <Bottles />
-          </div>
-        ) : (
-          <div>
-            <CarbonDioxyde />
-          </div>
-        )} */}
+      <div className="navbarDiv">
+        <div className="navButtonDiv">
+          <NavLink to="/">
+            <button
+              className="navButton type1"
+              onClick={() => {
+                setCurrentView("Homepage");
+              }}
+            >
+              Home
+            </button>
+          </NavLink>
+        </div>
+        <div className="navButtonDiv">
+          <NavLink to="/Bottles">
+            <button
+              className="navButton"
+              onClick={() => {
+                setCurrentView("Bottles");
+              }}
+            >
+              My bottles
+            </button>
+          </NavLink>
+        </div>
+        <div className="navButtonDiv">
+          <NavLink to="/CarbonDioxyde">
+            <button
+              className="navButton"
+              onClick={() => {
+                setCurrentView("Bottles");
+              }}
+            >
+              My CO2
+            </button>
+          </NavLink>
+        </div>
       </div>
     </>
   );

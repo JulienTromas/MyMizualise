@@ -42,13 +42,13 @@ User buttons with straight corners
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   font-size: 28px;
-  margin-top: 520px;
+  margin-top: 420px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .bottleMonth {
-  height: 225px;
+  height: 300px;
 }
 
 #header {
@@ -59,15 +59,6 @@ User buttons with straight corners
   background-color: rgba(255, 0, 0, 0.808);
 }
 
-#topBanner {
-  position: fixed;
-  top: 125px;
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-}
 
 #whiteTransparentBlock {
   position: fixed;
@@ -83,7 +74,7 @@ User buttons with straight corners
 
 #greenTopBanner {
   position: fixed;
-  top: 125px;
+  top: 63px;
   height: 400px;
   width: 100%;
   background-color: white;
@@ -94,27 +85,38 @@ User buttons with straight corners
 
 .navbarDiv {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   width: 100%;
   position: fixed;
   top: 0;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: #dfeef5;
 }
 
-.navButton {
+.navButtonDiv {
   flex: 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navButton {
+  /* flex: 1; comment out again*/
   background-color: transparent;
   text-align: center;
-  /* font-weight: bold; */
-  border: solid;
-  padding: 18px 32px;
+  /*font-weight: bold; comment out again*/
+  border: transparent;
+  padding: 18px 0px;
   text-align: center;
   color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   cursor: pointer;
+}
+
+.navFillerDiv {
+  height: 65px;
 }
 
 .header {
@@ -240,4 +242,51 @@ p {
   height: auto;
   max-width: 100px;
   vertical-align: -36px;
+}
+
+/*CARBON MAP STYLES*/
+.map-wrap {
+  display: flex;
+
+}
+
+.map{
+  position: fixed;
+  display: block;
+  z-index: 10;
+}
+
+.map-input {
+  flex: 1;
+
+}
+
+.map-map {
+  flex: 1;
+  z-index: -1;
+}
+
+.blue-space {
+  padding-bottom: 10px;
+  padding-top: 3px;
+  background-color: #dfeef5;
+  margin-top: auto;
+  margin-bottom: auto;
+  height:200px;
+}
+
+.combo-box {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+.combo-input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
 }

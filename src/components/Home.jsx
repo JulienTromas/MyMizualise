@@ -8,7 +8,7 @@ export default function Home({CurrentView, setCurrentView}) {
     <>
       <div className="Home">
         <div className="header" style={{backgroundImage: `url(${Background})`}}>
-          <h1 className="headerText">mymizualize</h1>
+          <h1 className="headerText">MyMizualise</h1>
           <p className="headerNote">
             A guide to visualizing mymizu's impact on the environment
           </p>

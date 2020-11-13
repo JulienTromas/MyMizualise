@@ -23,7 +23,6 @@ const libraries = ["places"];
 
 //We pass this to google maps so it knows how much to render the map by.
 const mapContainerStyle = {
-  width: "100vw",
   height: "500px",
 };
 //this is given to google maps so that it knows where to show on render
@@ -47,16 +46,26 @@ export default function Map() {
 
   //MAIN RENDER
   return (
-    <div>
-      <Search />
-      <GoogleMap
-        id="map"
-        mapContainerStyle={mapContainerStyle}
-        zoom={18}
-        center={center}
-      ></GoogleMap>
-      <div>{origin}</div>
-    </div>
+    <>
+      <div className="navFillerDiv"></div>
+      <div className="map-wrap">
+        <div className="map-input">
+          <Search />
+        </div>
+        <div className="map-map">
+          <GoogleMap
+            id="map"
+            mapContainerStyle={mapContainerStyle}
+            zoom={18}
+            center={center}
+          ></GoogleMap>
+        </div>
+      </div>
+      <div className="blue-space"></div>
+      <div className="white-space"></div>
+      <div className="blue-space"></div>
+      <div className="white-space"></div>
+    </>
   );
 }
 //------------------------------------------------------------
@@ -82,59 +91,68 @@ function Search() {
   return (
     // fdfa
     <div>
-      <Combobox
-        onSelect={async (address) => {
-          try {
-            const results1 = await getGeocode({address});
-            const originRes = await getLatLng(results1[0]);
-            console.log(originRes);
-            setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-          } catch (error) {
-            console.log("error!");
-          }
-        }}
-      >
-        <ComboboxInput
-          value1={value}
-          onChange={(e) => {
-            setValue(e.target.value);
+      <div className="destination-input">
+        <Combobox
+          className="combo-box"
+          onSelect={async (address) => {
+            try {
+              const results1 = await getGeocode({address});
+              const originRes = await getLatLng(results1[0]);
+              console.log(originRes);
+              setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+            } catch (error) {
+              console.log("error!");
+            }
           }}
-          disabled={!ready}
-          placeholder="Starting Point"
-        />
-        <ComboboxPopover>
-          {status === "OK" &&
-            data.map(({description}) => <ComboboxOption value={description} />)}
-        </ComboboxPopover>
-      </Combobox>
+        >
+          <ComboboxInput
+            className="combo-input"
+            value1={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            disabled={!ready}
+            placeholder="Starting Point"
+          />
+          <ComboboxPopover>
+            {status === "OK" &&
+              data.map(({description}) => <ComboboxOption value={description} />)}
+          </ComboboxPopover>
+        </Combobox>
+      </div>
 
-      <Combobox
-        onSelect={async (address) => {
-          try {
-            const results2 = await getGeocode({address});
-            const destRes = await getLatLng(results2[0]);
-            console.log(destRes);
-            setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-          } catch (error) {
-            console.log("error!");
-          }
-        }}
-      >
-        <ComboboxInput
-          value2={value}
-          onChange={(e) => {
-            setValue(e.target.value);
+      <div className="destination-input">
+        <Combobox
+          className="combo-box"
+          onSelect={async (address) => {
+            try {
+              const results2 = await getGeocode({address});
+              const destRes = await getLatLng(results2[0]);
+              console.log(destRes);
+              setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+            } catch (error) {
+              console.log("error!");
+            }
           }}
-          disabled={!ready}
-          placeholder="End Point"
-        />
-        <ComboboxPopover>
-          {status === "OK" &&
-            data.map(({description}) => <ComboboxOption value={description} />)}
-        </ComboboxPopover>
-      </Combobox>
-      <button onClick={() => setButtonClicked(true)}>Lets Go</button>
-
+        >
+          <ComboboxInput
+            className="combo-input"
+            value2={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            disabled={!ready}
+            placeholder="End Point"
+          />
+          <ComboboxPopover>
+            {status === "OK" &&
+              data.map(({description}) => <ComboboxOption value={description} />)}
+          </ComboboxPopover>
+        </Combobox>
+      </div>
+      <div>
+        <button onClick={() => setButtonClicked(true)}>Lets Go</button>
+      </div>
       {buttonClicked ? (
         <DistanceMatrixService
           options={{
@@ -143,8 +161,8 @@ function Search() {
             travelMode: "DRIVING",
           }}
           callback={(response) => {
-            console.log(parseInt(response.rows[0].elements[0].distance.text));
-            setKm(parseInt(response.rows[0].elements[0].distance.text));
+            setKm(response.rows[0].elements[0].distance.value / 1000);
+            console.log(response.rows[0].elements[0].distance);
             console.log(origin.lat, origin.lng);
             console.log(destination.lat, destination.lng);
             setButtonClicked(false);
@@ -159,6 +177,9 @@ function Search() {
       </div>
       <div>
         <b>{co2}</b> Kg of Carbon Dioxide
+      </div>
+      <div>
+        <b>{bottles}</b> empty 500ml bottles
       </div>
       <div>
         To date, mymizu users have saved a total of 26,032Kg's of C02, with only 3 plastic

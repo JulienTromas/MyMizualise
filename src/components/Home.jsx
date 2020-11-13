@@ -58,7 +58,7 @@ export default function Home({CurrentView, setCurrentView}) {
         <div className="footerDiv">
           <h2>
             <span className="footerText">Team Wave X </span>
-            <a href="https://www.mymizu.co/">
+            <a href="https://www.mymizu.co/" target="_blank">
               <img className="mymizuLogo" src={MymizuLogo} alt="mymizu" />
             </a>
           </h2>

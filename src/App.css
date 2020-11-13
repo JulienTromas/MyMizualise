@@ -158,7 +158,7 @@ html {
 }
 
 .App-logo {
-  height: 39.2vmin;
+  height: 38.8vmin;
   pointer-events: none;
 }
 
@@ -260,16 +260,17 @@ p {
 .input-wrapper {
   display: flex;
   z-index: -1;
-  border-radius: 10px;
-  border: none;
 }
 
 .origin-input {
   flex: 1;
+  border-radius: 10px;
 }
 
 .destination-input {
   flex: 1;
+  border-radius: 10px;
+
 }
 
 .map-wrap {

@@ -61,7 +61,15 @@ export default function Map() {
           ></GoogleMap>
         </div>
       </div>
-      <div className="blue-space"></div>
+      <div className="blue-space">
+        <div className="co2FooterText">
+          To date, mymizu users have saved a total of 26,032Kg's of C02, with only 3
+          plastic bottles of 500ml producing 1kg of CO2!
+        </div>
+        <div className="co2FooterText">
+          It is equivalent to driving back and forth from Tokyo to Kyoto 232 times!
+        </div>
+      </div>
       <div className="white-space"></div>
       <div className="blue-space"></div>
       <div className="white-space"></div>
@@ -93,70 +101,71 @@ function Search() {
   return (
     // fdfa
     <div>
-      <div className="input-wrapper"></div>
-      <div className="destination-input">
-        <Combobox
-          className="combo-box"
-          onSelect={async (address) => {
-            try {
-              const results1 = await getGeocode({address});
-              const originRes = await getLatLng(results1[0]);
-              console.log(originRes);
-              setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-            } catch (error) {
-              console.log("error!");
-            }
-          }}
-        >
-          <ComboboxInput
-            className="combo-input"
-            value1={value}
-            onChange={(e) => {
-              setValue(e.target.value);
+      <div className="input-wrapper">
+        <div className="origin-input">
+          <Combobox
+            className="combo-box"
+            onSelect={async (address) => {
+              try {
+                const results1 = await getGeocode({address});
+                const originRes = await getLatLng(results1[0]);
+                console.log(originRes);
+                setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+              } catch (error) {
+                console.log("error!");
+              }
             }}
-            disabled={!ready}
-            placeholder="Starting Point"
-          />
-          <ComboboxPopover>
-            {status === "OK" &&
-              data.map(({description}) => <ComboboxOption value={description} />)}
-          </ComboboxPopover>
-        </Combobox>
+          >
+            <ComboboxInput
+              className="combo-input"
+              value1={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
+              disabled={!ready}
+              placeholder="Starting Point"
+            />
+            <ComboboxPopover>
+              {status === "OK" &&
+                data.map(({description}) => <ComboboxOption value={description} />)}
+            </ComboboxPopover>
+          </Combobox>
+        </div>
+
+        <div className="destination-input">
+          <Combobox
+            className="combo-box"
+            onSelect={async (address) => {
+              try {
+                const results2 = await getGeocode({address});
+                const destRes = await getLatLng(results2[0]);
+                console.log(destRes);
+                setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+              } catch (error) {
+                console.log("error!");
+              }
+            }}
+          >
+            <ComboboxInput
+              className="combo-input"
+              value2={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
+              disabled={!ready}
+              placeholder="End Point"
+            />
+            <ComboboxPopover>
+              {status === "OK" &&
+                data.map(({description}) => <ComboboxOption value={description} />)}
+            </ComboboxPopover>
+          </Combobox>
+        </div>
       </div>
 
-      <div className="destination-input">
-        <Combobox
-          className="combo-box"
-          onSelect={async (address) => {
-            try {
-              const results2 = await getGeocode({address});
-              const destRes = await getLatLng(results2[0]);
-              console.log(destRes);
-              setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-            } catch (error) {
-              console.log("error!");
-            }
-          }}
-        >
-          <ComboboxInput
-            className="combo-input"
-            value2={value}
-            onChange={(e) => {
-              setValue(e.target.value);
-            }}
-            disabled={!ready}
-            placeholder="End Point"
-          />
-          <ComboboxPopover>
-            {status === "OK" &&
-              data.map(({description}) => <ComboboxOption value={description} />)}
-          </ComboboxPopover>
-        </Combobox>
-      </div>
-
-      <div>
+      <div className="letsGoDiv">
         <button className="go-button" onClick={() => setButtonClicked(true)}>
-          Lets Go
+          Let's Go
         </button>
       </div>
       {buttonClicked ? (
@@ -177,21 +186,17 @@ function Search() {
       ) : (
         <> </>
       )}
-
-      <div>
-        <b>{km}</b>Kilometers
+      <div className="co2Info">
+        <div className="co2Text">
+          <b>{km}</b> Kilometers
+        </div>
+        <div className="co2Text">
+          <b>{co2}</b> Kg of Carbon Dioxide
+        </div>
+        <div className="co2Text">
+          <b>{bottles}</b> empty 500ml bottles
+        </div>
       </div>
-      <div>
-        <b>{co2}</b> Kg of Carbon Dioxide
-      </div>
-      <div>
-        <b>{bottles}</b> empty 500ml bottles
-      </div>
-      <div>
-        To date, mymizu users have saved a total of 26,032Kg's of C02, with only 3 plastic
-        bottles of 500ml producing 1kg of CO2!
-      </div>
-      <div>It is equivalent to driving back and forth from Tokyo to Kyoto 232 times!</div>
     </div>
   );
 }

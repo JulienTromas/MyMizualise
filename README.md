@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+<p align="center"><a href="https://ibb.co/6YhHJs4"><img src="https://i.ibb.co/G7wW3PV/Screen-Shot-2020-10-31-at-7-30-45-PM.png" alt="Screen-Shot-2020-10-31-at-7-30-45-PM" border="0"></a></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+><b>SpotS</b> is your go to driving companion giving you navigational access to the complete network of <b>Flying K</b> travel centers
 
-## Available Scripts
+# Table of Contents
+  * [Introduction](#Introduction)
+  * [Usage](#Usage)
+  * [Developers Corner](#Developers_Corner)
+  * [Issues](#Issues)
+  * [The Team](#The_Team)
+  * [License](#License)
 
-In the project directory, you can run:
+## Introduction
 
-### `yarn start`
+Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Compatibility
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>iOS Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Samsung | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+Upon opening the app, use the drop down menu to select which state and city you are searching for a FlyingK stop.  After clicking the search button, the map will mark all existing FlyingK stops in the specified location. Click on the marker to receive the name and address of the stop, which can then be copied and pasted into any preferred navigation app of choice.  Click on the reset button to reset the map and begin a new search.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Developers Corner
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>SpotS</b> is a navigational app that is built on an express server configured to use Knex to update and retrieve from a postgresQL and send data to a front end built around native REACT. The app is currently deployed through Heroku
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Begin by making a fork of the repo from <link> and clone to your local drive. 
+<br>
+run yarn install to download dependences and update your package.json with the CLI scripts.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+yarn install
+```
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Take some time to familiarize yourself with the package.Json file.
+<br>
 
-## Learn More
+Before building and starting the file, create a local database called <b>truckstop</b> in <b>PostgresQL</b>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$createDB truckstop
+```
+<br>
+From here you can begin to build the app by running the following scripts:
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn build
+```
 
-### Code Splitting
+```bash
+yarn start
+```
+<br>
+The yarn build file will compile the code so that we can execute with yarn start. When yarn start runs, it will automatically run the knex migrations files and build the tables within database truckstop. Next it will run the knex seeding files to populate your local database. 
+<br>
+At this point the application will run on <a href= "http://localhost:9000/">Localhost:9000 </a>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Creating and running Migrations
+to make a migration, once dependancies have been installed, run the following in your node terminal:
 
-### Analyzing the Bundle Size
+```bash
+yarn migrate:make <migration_description>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This wil generate a Knex migration file. The migration will run upon the next start up of the app.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Issues
 
-### Advanced Configuration
+<b>Update 10.31.2020.v11</b>
+<br>
+ When running in a local environment, windows users may find that the server is not connecting with their local Postgresql database. The development team is aware of this problem. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## The Team
 
-### Deployment
+<a href= "https://github.com/kenny01123" >Kenny Ng <b>Tech Lead</b></a>
+<br>
+<br>
+<a href= "https://github.com/alexdang1993374">Alex Dang <b> React Front End</b></a>
+<br>
+<br>
+<a href= "https://github.com/Yoshi106">Yoshiaki Aibara <b>Postgres Backend & Heroku</b></a>
+<br>
+<br>
+<a href="https://github.com/Jaymontojo673">Jay Montojo <b>Postgres Backend & Heroku</b></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created during our time as <b>Code Chrysalis</b> students.
+
+Unlicensed
+
+-Team Yoshi's Island

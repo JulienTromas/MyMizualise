@@ -74,7 +74,7 @@ function Search() {
   const [origin, setOrigin] = useState([]);
   const [destination, setDestination] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [km, setKm] = useState();
+  const [km, setKm] = useState(0);
   let co2 = Math.round((km * 122.4) / 1000);
   let bottles = Math.round(co2 * 3);
 

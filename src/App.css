@@ -59,7 +59,6 @@ User buttons with straight corners
   background-color: rgba(255, 0, 0, 0.808);
 }
 
-
 #whiteTransparentBlock {
   position: fixed;
   bottom: 0px;
@@ -69,7 +68,7 @@ User buttons with straight corners
 }
 
 #November {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 }
 
 #greenTopBanner {
@@ -86,13 +85,16 @@ User buttons with straight corners
 .navbarDiv {
   display: flex;
   text-align: center;
-  /* align-items: center; */
-  /* justify-content: center; */
+  height: 65px;
   width: 100%;
   position: fixed;
   top: 0;
   /* border: 1px solid black; */
-  background-color: #dfeef5;
+}
+
+.navLogo {
+  width: 100%;
+  height: 100%;
 }
 
 .navButtonDiv {
@@ -102,14 +104,12 @@ User buttons with straight corners
 }
 
 .navButton {
-  /* flex: 1; comment out again*/
   background-color: transparent;
+  color: white;
   text-align: center;
-  /*font-weight: bold; comment out again*/
   border: transparent;
   padding: 18px 0px;
   text-align: center;
-  color: #2d383f;
   font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   cursor: pointer;
@@ -147,7 +147,7 @@ User buttons with straight corners
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 39.2vmin;
   pointer-events: none;
 }
 
@@ -247,10 +247,9 @@ p {
 /*CARBON MAP STYLES*/
 .map-wrap {
   display: flex;
-
 }
 
-.map{
+.map {
   position: fixed;
   display: block;
   z-index: 10;
@@ -258,7 +257,6 @@ p {
 
 .map-input {
   flex: 1;
-
 }
 
 .map-map {
@@ -272,7 +270,7 @@ p {
   background-color: #dfeef5;
   margin-top: auto;
   margin-bottom: auto;
-  height:200px;
+  height: 200px;
 }
 
 .combo-box {
@@ -289,4 +287,9 @@ p {
   padding: 0.5rem;
   font-size: 1.5rem;
   width: 100%;
+}
+
+.go-button {
+  width: 90px;
+  height: 40px;
 }

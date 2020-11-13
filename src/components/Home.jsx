@@ -26,6 +26,7 @@ export default function Home({CurrentView, setCurrentView}) {
               <NavLink to="/Bottles">
                 <button
                   className="routingButtons"
+                  alt="SEE BOTTLES SAVED HERE"
                   onClick={() => {
                     setCurrentView("Bottles");
                   }}
@@ -45,6 +46,7 @@ export default function Home({CurrentView, setCurrentView}) {
               <NavLink to="/CarbonDioxyde">
                 <button
                   className="routingButtons"
+                  alt="SEE CO2 SAVED HERE"
                   onClick={() => {
                     setCurrentView("CarbonDioxyde");
                   }}
@@ -58,7 +60,7 @@ export default function Home({CurrentView, setCurrentView}) {
         <div className="footerDiv">
           <h2>
             <span className="footerText">Team Wave X </span>
-            <a href="https://www.mymizu.co/">
+            <a href="https://www.mymizu.co/" target="_blank">
               <img className="mymizuLogo" src={MymizuLogo} alt="mymizu" />
             </a>
           </h2>

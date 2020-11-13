@@ -1,33 +1,34 @@
 import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
-// import Bottles from "./components/Bottles";
-// import CarbonDioxyde from "./components/CarbonDioxyde";
+import Background from "../img/pexels-daria-shevtsova-1680140.jpg";
+import Logo from "../img/mymizu-logo-2.svg";
 
 export default function Navbar({setCurrentView}) {
   return (
     <>
-      <div className="navbarDiv">
+      <div className="navbarDiv" style={{backgroundImage: `url(${Background})`}}>
         <div className="navButtonDiv">
           <NavLink to="/">
-            <button
-              className="navButton type1"
+            <img
+              src={Logo}
+              alt="logo"
+              className="navLogo"
               onClick={() => {
                 setCurrentView("Homepage");
               }}
-            >
-              Home
-            </button>
+            />
           </NavLink>
         </div>
         <div className="navButtonDiv">
           <NavLink to="/Bottles">
             <button
+              alt="My Bottles"
               className="navButton"
               onClick={() => {
                 setCurrentView("Bottles");
               }}
             >
-              My bottles
+              My Bottles
             </button>
           </NavLink>
         </div>
@@ -35,6 +36,7 @@ export default function Navbar({setCurrentView}) {
           <NavLink to="/CarbonDioxyde">
             <button
               className="navButton"
+              alt="My CO2"
               onClick={() => {
                 setCurrentView("Bottles");
               }}

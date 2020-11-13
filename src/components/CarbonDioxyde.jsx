@@ -64,7 +64,7 @@ export default function Map() {
       <div className="blue-space"></div>
       <div className="white-space"></div>
       <div className="blue-space"></div>
-      <div className="blue-space"></div>
+      <div className="white-space"></div>
     </>
   );
 }
@@ -91,63 +91,68 @@ function Search() {
   return (
     // fdfa
     <div>
-      <Combobox
-        className="combo-box"
-        onSelect={async (address) => {
-          try {
-            const results1 = await getGeocode({address});
-            const originRes = await getLatLng(results1[0]);
-            console.log(originRes);
-            setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-          } catch (error) {
-            console.log("error!");
-          }
-        }}
-      >
-        <ComboboxInput
-          className="combo-input"
-          value1={value}
-          onChange={(e) => {
-            setValue(e.target.value);
+      <div className="destination-input">
+        <Combobox
+          className="combo-box"
+          onSelect={async (address) => {
+            try {
+              const results1 = await getGeocode({address});
+              const originRes = await getLatLng(results1[0]);
+              console.log(originRes);
+              setOrigin(originRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+            } catch (error) {
+              console.log("error!");
+            }
           }}
-          disabled={!ready}
-          placeholder="Starting Point"
-        />
-        <ComboboxPopover>
-          {status === "OK" &&
-            data.map(({description}) => <ComboboxOption value={description} />)}
-        </ComboboxPopover>
-      </Combobox>
+        >
+          <ComboboxInput
+            className="combo-input"
+            value1={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            disabled={!ready}
+            placeholder="Starting Point"
+          />
+          <ComboboxPopover>
+            {status === "OK" &&
+              data.map(({description}) => <ComboboxOption value={description} />)}
+          </ComboboxPopover>
+        </Combobox>
+      </div>
 
-      <Combobox
-        className="combo-box"
-        onSelect={async (address) => {
-          try {
-            const results2 = await getGeocode({address});
-            const destRes = await getLatLng(results2[0]);
-            console.log(destRes);
-            setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
-          } catch (error) {
-            console.log("error!");
-          }
-        }}
-      >
-        <ComboboxInput
-          className="combo-input"
-          value2={value}
-          onChange={(e) => {
-            setValue(e.target.value);
+      <div className="destination-input">
+        <Combobox
+          className="combo-box"
+          onSelect={async (address) => {
+            try {
+              const results2 = await getGeocode({address});
+              const destRes = await getLatLng(results2[0]);
+              console.log(destRes);
+              setDestination(destRes); //CHANGE THIS TO POINT TO DISTANCE MATRIX
+            } catch (error) {
+              console.log("error!");
+            }
           }}
-          disabled={!ready}
-          placeholder="End Point"
-        />
-        <ComboboxPopover>
-          {status === "OK" &&
-            data.map(({description}) => <ComboboxOption value={description} />)}
-        </ComboboxPopover>
-      </Combobox>
-      <button onClick={() => setButtonClicked(true)}>Lets Go</button>
-
+        >
+          <ComboboxInput
+            className="combo-input"
+            value2={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            disabled={!ready}
+            placeholder="End Point"
+          />
+          <ComboboxPopover>
+            {status === "OK" &&
+              data.map(({description}) => <ComboboxOption value={description} />)}
+          </ComboboxPopover>
+        </Combobox>
+      </div>
+      <div>
+        <button onClick={() => setButtonClicked(true)}>Lets Go</button>
+      </div>
       {buttonClicked ? (
         <DistanceMatrixService
           options={{

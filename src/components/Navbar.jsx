@@ -9,6 +9,7 @@ export default function Navbar({setCurrentView}) {
       <div id="#header_navbar">
         <NavLink to="/">
           <button
+            alt="Homepage button"
             className="navButton"
             onClick={() => {
               setCurrentView("Homepage");
@@ -19,6 +20,7 @@ export default function Navbar({setCurrentView}) {
         </NavLink>
         <NavLink to="/Bottles">
           <button
+            alt="Plastic Bottles page button"
             className="navButton"
             onClick={() => {
               setCurrentView("Bottles");
@@ -28,7 +30,15 @@ export default function Navbar({setCurrentView}) {
           </button>
         </NavLink>
         <NavLink to="/CarbonDioxyde">
-          <button>My CO2</button>
+          <button
+            alt="Carbon Dioxyde page button"
+            className="navButton"
+            onClick={() => {
+              setCurrentView("CarbonDioxyde");
+            }}
+          >
+            My CO2
+          </button>
         </NavLink>
 
         {/* <p>{props.data.refill_amount}</p> */}

@@ -26,6 +26,7 @@ export default function Home({CurrentView, setCurrentView}) {
               <NavLink to="/Bottles">
                 <button
                   className="routingButtons"
+                  alt="SEE BOTTLES SAVED HERE"
                   onClick={() => {
                     setCurrentView("Bottles");
                   }}
@@ -45,6 +46,7 @@ export default function Home({CurrentView, setCurrentView}) {
               <NavLink to="/CarbonDioxyde">
                 <button
                   className="routingButtons"
+                  alt="SEE CO2 SAVED HERE"
                   onClick={() => {
                     setCurrentView("CarbonDioxyde");
                   }}

@@ -260,6 +260,8 @@ p {
 .input-wrapper {
   display: flex;
   z-index: -1;
+  border-radius: 10px;
+  border: none;
 }
 
 .origin-input {

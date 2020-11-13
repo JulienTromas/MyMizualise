@@ -37,10 +37,12 @@ export default function Home({CurrentView, setCurrentView}) {
             </div>
           </div>
           <div className="routeBoxes">
-            <p className="boxTitles">CO2 Saved</p>
+            <p className="boxTitles">
+              CO<sub>2</sub> Saved
+            </p>
             <p className="textDescription">
-              Try our handy map tool to understand how much CO2 you can save by using
-              mymizu!
+              Try our handy map tool to understand how much CO<sub>2</sub> you can save by
+              using mymizu!
             </p>
             <div className="buttonBox">
               <NavLink to="/CarbonDioxyde">
@@ -51,7 +53,7 @@ export default function Home({CurrentView, setCurrentView}) {
                     setCurrentView("CarbonDioxyde");
                   }}
                 >
-                  SEE CO2 SAVED HERE
+                  SEE CO<sub>2</sub> SAVED HERE
                 </button>
               </NavLink>
             </div>

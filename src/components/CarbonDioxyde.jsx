@@ -63,8 +63,8 @@ export default function Map() {
       </div>
       <div className="blue-space">
         <div className="co2FooterText">
-          To date, mymizu users have saved a total of 26,032Kg's of C02, with only 3
-          plastic bottles of 500ml producing 1kg of CO2!
+          To date, mymizu users have saved a total of 26,032kg of CO<sub>2</sub>, with
+          only 3 plastic bottles of 500ml producing 1kg of CO<sub>2</sub>!
         </div>
         <div className="co2FooterText">
           It is equivalent to driving back and forth from Tokyo to Kyoto 232 times!
@@ -188,10 +188,10 @@ function Search() {
       )}
       <div className="co2Info">
         <div className="co2Text">
-          <b>{km}</b> Kilometers
+          <b>{km}</b> kilometers
         </div>
         <div className="co2Text">
-          <b>{co2}</b> Kg of Carbon Dioxide
+          <b>{co2}</b> kg of CO<sub>2</sub>
         </div>
         <div className="co2Text">
           <b>{bottles}</b> empty 500ml bottles

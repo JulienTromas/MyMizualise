@@ -21,7 +21,7 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
 
   useScrollPosition(({prevPos, currPos}) => {
     setYPosition(-currPos.y);
-    console.log(yPosition);
+    // console.log(yPosition);
   });
 
   useEffect(() => {
@@ -89,13 +89,13 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           <div id="February" className="bottleMonth">
             <p>
               In February of 2020, we prevented an additional{" "}
-              <em>2988 plastic bottles</em> from being used
+              <em>2,988 plastic bottles</em> from being used
             </p>
             <p>Now the bottles are as tall as the Shanghai Tower!</p>
           </div>
           <div id="March" className="bottleMonth">
             <p>
-              In March of 2020, we prevented another<em>3115 plastic bottles</em> from
+              In March of 2020, we prevented another <em>3,115 plastic bottles</em> from
               being used
             </p>
             <p>
@@ -104,31 +104,32 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           </div>
           <div id="April" className="bottleMonth">
             <p>
-              In April of 2020, we prevented <em>2468 plastic bottles</em> from being used
+              In April of 2020, we prevented <em>2,468 plastic bottles</em> from being
+              used
             </p>
             <p>All together that's the height of 7 Godzillas!</p>
           </div>
           <div id="May" className="bottleMonth">
             <p>
-              In May of 2020, we prevented <em>2678 plastic bottles</em> from being used
+              In May of 2020, we prevented <em>2,678 plastic bottles</em> from being used
             </p>
             <p>The bottles are as tall as 8 Eiffel Towers!</p>
           </div>
           <div id="June" className="bottleMonth">
             <p>
-              In June of 2020, we prevented <em>4147 plastic bottles</em> from being used
+              In June of 2020, we prevented <em>4,147 plastic bottles</em> from being used
             </p>
             <p>Bottle tower is higher than 37 Statue of Liberties!</p>
           </div>
           <div id="July" className="bottleMonth">
             <p>
-              In July of 2020, we prevented <em>5336 plastic bottles</em> from being used
+              In July of 2020, we prevented <em>5,336 plastic bottles</em> from being used
             </p>
             <p>The bottles are taller than 220 gundams put together!</p>
           </div>
           <div id="August" className="bottleMonth">
             <p>
-              In August of 2020, we prevented <em>5747 plastic bottles</em> from being
+              In August of 2020, we prevented <em>5,747 plastic bottles</em> from being
               used
             </p>
             <p>
@@ -138,22 +139,25 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           </div>
           <div id="September" className="bottleMonth">
             <p>
-              In September of 2020, we prevented <em>7219 plastic bottles</em> from being
+              In September of 2020, we prevented <em>7,219 plastic bottles</em> from being
               used
             </p>
             <p>Bottle mountain is as tall as 2 Mount Fujis on top of each other!</p>
           </div>
           <div id="October" className="bottleMonth">
             <p>
-              In October of 2020, we prevented <em>38238 plastic bottles</em> from being
+              In October of 2020, we prevented <em>38,238 plastic bottles</em> from being
               used, thanks to a partnership with Lixit
             </p>
             <p>Now the bottles are taller than 137 International Space Stations!</p>
           </div>
           <div id="November" className="bottleMonth">
             <p>
-              In November of 2020, we prevented <em>4120 plastic bottles</em> from being
+              In November of 2020, we prevented <em>4,120 plastic bottles</em> from being
               used so far
+            </p>
+            <p>
+              All together that's over <em>78,000 bottles!</em>
             </p>
             <p>Bottle mountain is as tall as 2 Mount Everests and growing!</p>
           </div>

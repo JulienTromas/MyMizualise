@@ -6,6 +6,13 @@ import logo from "../img/d0d2bfee495ec3e77dbc41f188eb9acf.svg";
 import burg from "../img/burj-khalifa.svg";
 import shanghai from "../img/oriental-pearl-tower.svg";
 import godzilla from "../img/godzilla.svg";
+import paris from "../img/paris.svg";
+import fuji from "../img/mount-fuji.svg";
+import gundam from "../img/gundam.svg";
+import pyramid from "../img/pyramids.svg";
+import liberty from "../img/statue-of-liberty.svg";
+import space from "../img/space-station.svg";
+import everest from "../img/mission.svg";
 // import styled, {keyframes} from "styled-components";
 // import {bounce} from "react-animations";
 
@@ -23,49 +30,49 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
 
   return (
     <>
-      <div id="#header_navbar">{/* <Navbar /> */}</div>
-      {yPosition >= 76 && yPosition < 250 ? (
+      <div className="navFillerDiv"></div>
+      {yPosition >= 122 && yPosition < 446 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#7BB668"}}>
-          <img src={shanghai} className="App-logo" alt="logo" />
+          <img src={shanghai} className="App-logo" alt="Shanghai Tower" />
         </div>
-      ) : yPosition >= 250 && yPosition < 427 ? (
+      ) : yPosition >= 446 && yPosition < 770 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#E39EC1"}}>
-          <img src={burg} className="App-logo" alt="logo" />
+          <img src={burg} className="App-logo" alt="Burj Khalifa" />
         </div>
-      ) : yPosition >= 427 && yPosition < 600 ? (
+      ) : yPosition >= 770 && yPosition < 1102 ? (
         <div id="greenTopBanner" style={{backgroundColor: "#EF452E"}}>
-          <img src={godzilla} className="App-logo" alt="logo" />
+          <img src={godzilla} className="App-logo" alt="Godzilla" />
         </div>
-      ) : yPosition >= 600 && yPosition < 778 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
-          May
+      ) : yPosition >= 1102 && yPosition < 1438 ? (
+        <div id="greenTopBanner" style={{backgroundColor: "#F2F79E"}}>
+          <img src={paris} className="App-logo" alt="Eiffel Tower" />
         </div>
-      ) : yPosition >= 778 && yPosition < 954 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "orange"}}>
-          June
+      ) : yPosition >= 1438 && yPosition < 1757 ? (
+        <div id="greenTopBanner" style={{backgroundColor: "#6B9AC4"}}>
+          <img src={liberty} className="App-logo" alt="Statue of Liberty" />
         </div>
-      ) : yPosition >= 954 && yPosition < 1131 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "purple"}}>
-          July
+      ) : yPosition >= 1757 && yPosition < 2085 ? (
+        <div id="greenTopBanner" style={{backgroundColor: "#7D80DA"}}>
+          <img src={gundam} className="App-logo" alt="Gundam" />
         </div>
-      ) : yPosition >= 1131 && yPosition < 1306 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "brown"}}>
-          August
+      ) : yPosition >= 2085 && yPosition < 2413 ? (
+        <div id="greenTopBanner" style={{backgroundColor: "#A19568"}}>
+          <img src={pyramid} className="App-logo" alt="Pyramids" />
         </div>
-      ) : yPosition >= 1306 && yPosition < 1482 ? (
+      ) : yPosition >= 2413 && yPosition < 2741 ? (
         <div id="greenTopBanner" style={{backgroundColor: "aqua"}}>
-          September
+          <img src={fuji} className="App-logo" alt="Mount Fuji" />
         </div>
-      ) : yPosition >= 1482 && yPosition < 1658 ? (
-        <div id="greenTopBanner" style={{backgroundColor: "chartreuse"}}>
-          October
+      ) : yPosition >= 2741 && yPosition < 3073 ? (
+        <div id="greenTopBanner" style={{backgroundColor: "#212531"}}>
+          <img src={space} className="App-logo" alt="Space station" />
         </div>
-      ) : yPosition >= 1658 ? (
+      ) : yPosition >= 3073 ? (
         <div id="greenTopBanner" style={{backgroundColor: "yellow"}}>
-          November
+          <img src={everest} className="App-logo" alt="Mount Everest" />
         </div>
       ) : (
-        <div id="topBanner">
+        <div id="greenTopBanner" style={{backgroundColor: "#D6D6D6"}}>
           <img src={logo} className="App-logo" alt="logo" />
         </div>
       )}
@@ -81,8 +88,8 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           </div>
           <div id="February" className="bottleMonth">
             <p>
-              In February of 2020, we prevented an additional<em>2988 plastic bottles</em>{" "}
-              from being used
+              In February of 2020, we prevented an additional{" "}
+              <em>2988 plastic bottles</em> from being used
             </p>
             <p>Now the bottles are as tall as the Shanghai Tower!</p>
           </div>
@@ -105,21 +112,28 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
             <p>
               In May of 2020, we prevented <em>2678 plastic bottles</em> from being used
             </p>
+            <p>The bottles are as tall as 8 Eiffel Towers!</p>
           </div>
           <div id="June" className="bottleMonth">
             <p>
               In June of 2020, we prevented <em>4147 plastic bottles</em> from being used
             </p>
+            <p>Bottle tower is higher than 37 Statue of Liberties!</p>
           </div>
           <div id="July" className="bottleMonth">
             <p>
               In July of 2020, we prevented <em>5336 plastic bottles</em> from being used
             </p>
+            <p>The bottles are taller than 220 gundams put together!</p>
           </div>
           <div id="August" className="bottleMonth">
             <p>
               In August of 2020, we prevented <em>5747 plastic bottles</em> from being
               used
+            </p>
+            <p>
+              Now the bottles are as tall as 39 Egyptian pyramids stacked on top of each
+              other!
             </p>
           </div>
           <div id="September" className="bottleMonth">
@@ -127,25 +141,27 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
               In September of 2020, we prevented <em>7219 plastic bottles</em> from being
               used
             </p>
+            <p>Bottle mountain is as tall as 2 Mount Fujis on top of each other!</p>
           </div>
           <div id="October" className="bottleMonth">
             <p>
               In October of 2020, we prevented <em>38238 plastic bottles</em> from being
               used, thanks to a partnership with Lixit
             </p>
+            <p>Now the bottles are taller than 137 International Space Stations!</p>
           </div>
           <div id="November" className="bottleMonth">
             <p>
               In November of 2020, we prevented <em>4120 plastic bottles</em> from being
               used so far
             </p>
+            <p>Bottle mountain is as tall as 2 Mount Everests and growing!</p>
           </div>
         </div>
       </div>
     </>
   );
 }
-
 /*
 JANUARY: 1892     946L     382m    208120Y    39kg
 FEBRUARY: 4880    603.5m   102.5kg   536800 Y

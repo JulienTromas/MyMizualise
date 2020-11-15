@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Introduction
+Brought to you by Team Wave in partnership with my<b>mizu<b>, MyMizualise is a new way to visualize the efforts of my<b>mizu<b> and their dedicated community through clean UI, easy integrateability, and interactive components. Together let's visualize a cleaner tomorrow, today.
 
 #### Compatibility
 
@@ -20,12 +20,12 @@ Introduction
 
 
 ## Usage
-
+This App is currently in early development. Currently we have an interactive timeline scroller and a Co2 to plastic bottle visualizer with plans of adding more in the future.
 
 
 ## Developers
 
-
+Please look through this readMe prior to making a fork of the repository. <b>NOTE</b> that in order to access all of the features of MyMizualise locally, you must create a .env file and request developer keys from my<b>mizu<b> and Google API
 
 
 #### Getting Started
@@ -43,12 +43,7 @@ yarn install
 Take some time to familiarize yourself with the package.Json file.
 <br>
 
-Before building and starting the file, create a local database called <b>truckstop</b> in <b>PostgresQL</b>
-<br>
 
-```
-$createDB truckstop
-```
 <br>
 From here you can begin to build the app by running the following scripts:
 <br>

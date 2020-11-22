@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Brought to you by Team Wave in partnership with my<b>mizu<b>, MyMizualise is a new way to visualize the efforts of my<b>mizu<b> and their dedicated community through clean UI, easy integrateability, and interactive components. Together let's visualize a cleaner tomorrow, today.
+Brought to you by Team Wave in partnership with my<b>mizu<b>, MyMizualise is a new way to visualize the efforts of my<b>mizu<b> and their dedicated community through clean UI, easy integration, and interactive components. Together let's visualize a cleaner tomorrow, today.
 
 #### Compatibility
 
@@ -71,13 +71,15 @@ yarn migrate:make <migration_description>
 This wil generate a Knex migration file. The migration will run upon the next start up of the app.
 
 
-## Issues
-
-
 ## Team
 
+Clay, front-end engineer: https://github.com/tlightk
 
+Alex, full-stack engineer: https://github.com/alexdang1993374
 
+Jay, back-end engineer: https://github.com/Jaymontojo673
+
+Julien, tech lead
 
 ## License
 

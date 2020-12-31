@@ -147,7 +147,7 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
           <div id="October" className="bottleMonth">
             <p>
               In October of 2020, we prevented <em>38,238 plastic bottles</em> from being
-              used, thanks to a partnership with Lixit
+              used, thanks to a partnership with LIXIL
             </p>
             <p>Now the bottles are taller than 137 International Space Stations!</p>
           </div>

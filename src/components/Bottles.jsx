@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-// import { ReactComponent as Bottle } from '../img/waterbottle.svg';
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 import Navbar from "./Navbar";
 import logo from "../img/d0d2bfee495ec3e77dbc41f188eb9acf.svg";
@@ -13,15 +12,13 @@ import pyramid from "../img/pyramids.svg";
 import liberty from "../img/statue-of-liberty.svg";
 import space from "../img/space-station.svg";
 import everest from "../img/mission.svg";
-// import styled, {keyframes} from "styled-components";
-// import {bounce} from "react-animations";
+
 
 export default function Bottles({scroll, setScroll, data, setCurrentView}) {
   const [yPosition, setYPosition] = useState(0);
 
   useScrollPosition(({prevPos, currPos}) => {
     setYPosition(-currPos.y);
-    // console.log(yPosition);
   });
 
   useEffect(() => {
@@ -166,17 +163,3 @@ export default function Bottles({scroll, setScroll, data, setCurrentView}) {
     </>
   );
 }
-/*
-JANUARY: 1892     946L     382m    208120Y    39kg
-FEBRUARY: 4880    603.5m   102.5kg   536800 Y
-MARCH: 7995   1615m   879450Y  168kg
-APRIL: 10463   2113.5m   1150930Y    219.7kg  
-MAY: 13141 2654.5m  1445510Y  276kg
-JUNE: 17288  3492m  1901680Y   363kg
-JULY: 22624   4570m   2488640Y   475kg
-AUGUST: 28371  5731m    3120810Y    596kg
-SEPTEMBER: 35590  7189m   3914900Y    747.4kg
-OCTOBER: 73828  14913m    8121080Y   1550.4kg 
-NOVEMBER: 79000   15958m    8690000Y    1659kg
-
-*/
